@@ -1,22 +1,23 @@
 # R-usages
 
-목차
+#### 데이터 분석 절차에 따른 Usages
 
-1. Data Prepare 
+1. Data Prepare (데이터 준비과정)  
    - Data Reading (파일 읽기)
    - Data Type Change (형변환)
-2. Data Profiling 
-   - Outlier detection
-   - Group by and Summarise 
-   - Information extract 
-3. Clustering 
-4. Modeling 
-5. Training / Inference 
-6. Services 
+2. Data Profiling (데이터 프로파일링)
+   - Outlier detection (이상치 탐지)
+   - Feature Engineering (변수 추출)
+3. Clustering (데이터 그룹화 하기)
+4. Modeling (ML/AI 모델링)
+5. Training / Inference (예측 및 훈련과정)
+6. Service with AWS (R코드를 서비스로 배포하기)
 
-번외
 
-1. TimeSeries Analysis 
+
+#### 데이터 분석 Case Study
+
+1. TimeSeries Analysis (시계열 데이터 분석)
   - Trigonometric Model
   - Binary Model
 
