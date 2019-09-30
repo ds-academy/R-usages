@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567341599459.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B9E569D5",
+    "lastKnownWriteTime" : 1567529124,
+    "last_content_update" : 1567529124152,
+    "path" : "~/001-dev/002-r/R-usages/01-data-prepare/001-Data-Reading.R",
+    "project_path" : "01-data-prepare/001-Data-Reading.R",
+    "properties" : {
+        "cursorPosition" : "11,41",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

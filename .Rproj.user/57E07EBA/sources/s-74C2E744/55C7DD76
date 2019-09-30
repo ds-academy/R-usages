@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569164630692.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "55C7DD76",
+    "lastKnownWriteTime" : 1569024635,
+    "last_content_update" : 1569024635,
+    "path" : "~/001-dev/002-r/R-usages-full/20190920/R000-GLOBAL_FUNCTIONS_V1.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "88,0",
+        "scrollLine" : "77"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

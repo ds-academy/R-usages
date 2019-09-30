@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567529474293.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1F3CD73D",
+    "lastKnownWriteTime" : 1569837386,
+    "last_content_update" : 1569837386,
+    "path" : "~/001-dev/002-r/R-usages/.gitignore",
+    "project_path" : ".gitignore",
+    "properties" : {
+        "cursorPosition" : "4,10",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "gitignore"
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569144983685.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F0BEE6CF",
+    "lastKnownWriteTime" : 1569166167,
+    "last_content_update" : 1569166167546,
+    "path" : "~/001-dev/002-r/R-usages/08-Solve-RealData-Problems/Funda-scripts.R",
+    "project_path" : "08-Solve-RealData-Problems/Funda-scripts.R",
+    "properties" : {
+        "cursorPosition" : "47,30",
+        "scrollLine" : "40"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,976 @@
+]0;~/001-dev/002-r/R-usages[?1034h(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ ls
+01-data-prepare	R-usages.Rproj	README.md
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.Rproj.user/[m
+	[31m01-data-prepare/[m
+	[31mR-usages.Rproj[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "01-Data[K[K[K[K[K[K[K1 Data Reading update"[1@0[C[C[1P[1@.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master a764a00] 01.Data Reading update
+ 14 files changed, 442 insertions(+)
+ create mode 100644 .Rproj.user/57E07EBA/console06/865B45F5
+ create mode 100644 .Rproj.user/57E07EBA/console06/865B45F5.env
+ create mode 100644 .Rproj.user/57E07EBA/console06/INDEX001
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/11A1548F
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/5F586D7F
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/INDEX
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/3724D352-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 01-data-prepare/001-Data-Reading.R
+ create mode 100644 R-usages.Rproj
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git remote a[Kadd origin https://github.com/Joohyoung/R-usa ges.git
+fatal: remote origin already exists.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u or[K[Korigin master
+Enumerating objects: 24, done.
+Counting objects:   4% (1/24)   Counting objects:   8% (2/24)   Counting objects:  12% (3/24)   Counting objects:  16% (4/24)   Counting objects:  20% (5/24)   Counting objects:  25% (6/24)   Counting objects:  29% (7/24)   Counting objects:  33% (8/24)   Counting objects:  37% (9/24)   Counting objects:  41% (10/24)   Counting objects:  45% (11/24)   Counting objects:  50% (12/24)   Counting objects:  54% (13/24)   Counting objects:  58% (14/24)   Counting objects:  62% (15/24)   Counting objects:  66% (16/24)   Counting objects:  70% (17/24)   Counting objects:  75% (18/24)   Counting objects:  79% (19/24)   Counting objects:  83% (20/24)   Counting objects:  87% (21/24)   Counting objects:  91% (22/24)   Counting objects:  95% (23/24)   Counting objects: 100% (24/24)   Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 6.89 KiB | 128.00 KiB/s, done.
+Total 23 (delta 0), reused 0 (delta 0)
+To https://github.com/Joohyoung/R-usages.git
+   cc06111..a764a00  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Everything up-to-date
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin masterremote add origin https://github.com/Joohyoung/R-usagges.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pcommit -m "01.Data Reading update"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .[Kgit add .push -u origin master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Everything up-to-date
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin masteradd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin masteradd .[Kpush -u origin masterremote add origin https://github.com/Joohyoung/R-usagges.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pcommit -m "01.Data Reading update"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[master 3a813cb] 01.Data Reading update
+ 5 files changed, 48 insertions(+), 8 deletions(-)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "01.Data Reading update"add .[Kcommit -m "01.Data Reading update"[Kgit commit -m "01.Data Reading update"add .[Kpush -u origin master
+Enumerating objects: 25, done.
+Counting objects:   4% (1/25)   Counting objects:   8% (2/25)   Counting objects:  12% (3/25)   Counting objects:  16% (4/25)   Counting objects:  20% (5/25)   Counting objects:  24% (6/25)   Counting objects:  28% (7/25)   Counting objects:  32% (8/25)   Counting objects:  36% (9/25)   Counting objects:  40% (10/25)   Counting objects:  44% (11/25)   Counting objects:  48% (12/25)   Counting objects:  52% (13/25)   Counting objects:  56% (14/25)   Counting objects:  60% (15/25)   Counting objects:  64% (16/25)   Counting objects:  68% (17/25)   Counting objects:  72% (18/25)   Counting objects:  76% (19/25)   Counting objects:  80% (20/25)   Counting objects:  84% (21/25)   Counting objects:  88% (22/25)   Counting objects:  92% (23/25)   Counting objects:  96% (24/25)   Counting objects: 100% (25/25)   Counting objects: 100% (25/25), done.
+Delta compression using up to 4 threads
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 3.35 KiB | 1.67 MiB/s, done.
+Total 13 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   a764a00..3a813cb  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "01.Data Reading update"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "01.Data Reading update"
+[master 77effff] 01.Data Reading update
+ 24 files changed, 1992 insertions(+), 12 deletions(-)
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/341A4E0B
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/355FEF33
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/3ADB2D3D
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/426CEF37
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/5742F716
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/10567B13
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/10567B13-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/64F21D50
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/64F21D50-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7F638847-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B33A1450
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B33A1450-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2-contents
+ create mode 100644 01-data-prepare/002-Data-Type-Changes.R
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "01.Data Reading update"add .[Kpush -u origin mastercommit -m "01.Data Reading update"[13Ppush -u origin mastercommit -m "01.Data Reading update"[13Ppush -u origin master
+Enumerating objects: 49, done.
+Counting objects:   2% (1/49)   Counting objects:   4% (2/49)   Counting objects:   6% (3/49)   Counting objects:   8% (4/49)   Counting objects:  10% (5/49)   Counting objects:  12% (6/49)   Counting objects:  14% (7/49)   Counting objects:  16% (8/49)   Counting objects:  18% (9/49)   Counting objects:  20% (10/49)   Counting objects:  22% (11/49)   Counting objects:  24% (12/49)   Counting objects:  26% (13/49)   Counting objects:  28% (14/49)   Counting objects:  30% (15/49)   Counting objects:  32% (16/49)   Counting objects:  34% (17/49)   Counting objects:  36% (18/49)   Counting objects:  38% (19/49)   Counting objects:  40% (20/49)   Counting objects:  42% (21/49)   Counting objects:  44% (22/49)   Counting objects:  46% (23/49)   Counting objects:  48% (24/49)   Counting objects:  51% (25/49)   Counting objects:  53% (26/49)   Counting objects:  55% (27/49)   Counting objects:  57% (28/49)   Counting objects:  59% (29/49)   Counting objects:  61% (30/49)   Counting objects:  63% (31/49)   Counting objects:  65% (32/49)   Counting objects:  67% (33/49)   Counting objects:  69% (34/49)   Counting objects:  71% (35/49)   Counting objects:  73% (36/49)   Counting objects:  75% (37/49)   Counting objects:  77% (38/49)   Counting objects:  79% (39/49)   Counting objects:  81% (40/49)   Counting objects:  83% (41/49)   Counting objects:  85% (42/49)   Counting objects:  87% (43/49)   Counting objects:  89% (44/49)   Counting objects:  91% (45/49)   Counting objects:  93% (46/49)   Counting objects:  95% (47/49)   Counting objects:  97% (48/49)   Counting objects: 100% (49/49)   Counting objects: 100% (49/49), done.
+Delta compression using up to 4 threads
+Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
+Writing objects:   3% (1/32)   Writing objects:   6% (2/32)   Writing objects:   9% (3/32)   Writing objects:  12% (4/32)   Writing objects:  15% (5/32)   Writing objects:  18% (6/32)   Writing objects:  21% (7/32)   Writing objects:  25% (8/32)   Writing objects:  28% (9/32)   Writing objects:  31% (10/32)   Writing objects:  34% (11/32)   Writing objects:  37% (12/32)   Writing objects:  40% (13/32)   Writing objects:  43% (14/32)   Writing objects:  46% (15/32)   Writing objects:  50% (16/32)   Writing objects:  53% (17/32)   Writing objects:  56% (18/32)   Writing objects:  59% (19/32)   Writing objects:  62% (20/32)   Writing objects:  65% (21/32)   Writing objects:  68% (22/32)   Writing objects:  71% (23/32)   Writing objects:  75% (24/32)   Writing objects:  78% (25/32)   Writing objects:  81% (26/32)   Writing objects:  84% (27/32)   Writing objects:  87% (28/32)   Writing objects:  90% (29/32)   Writing objects:  93% (30/32)   Writing objects:  96% (31/32)   Writing objects: 100% (32/32)   Writing objects: 100% (32/32), 16.92 KiB | 298.00 KiB/s, done.
+Total 32 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 4 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   3a813cb..77effff  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "01.Data Reading update"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "01.Data Reading update"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"D"a"t"a" "U"p"d"a"t"e" "[1P"[1P"[1P"[1P"[1P"[1P"[1P"a"n"d" "R"e"a"d"m"e" "u"p"d"a"t"e"
+[master db75195] Data and Readme update
+ 12 files changed, 2181485 insertions(+), 6 deletions(-)
+ rewrite .Rproj.user/57E07EBA/console06/INDEX001 (70%)
+ create mode 100755 01-data-prepare/Data/Historical Product Demand.csv
+ create mode 100755 01-data-prepare/Data/ecommerce-data.csv
+ create mode 100755 01-data-prepare/Data/tv-sales-forecast.csv
+ create mode 100755 01-data-prepare/Data/wallmart-sales-forecast-datasets/features.csv
+ create mode 100755 01-data-prepare/Data/wallmart-sales-forecast-datasets/stores.csv
+ create mode 100755 01-data-prepare/Data/wallmart-sales-forecast-datasets/test.csv
+ create mode 100755 01-data-prepare/Data/wallmart-sales-forecast-datasets/train.csv
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "Data and Readme update"add .[Kpush -u origin master
+Enumerating objects: 36, done.
+Counting objects:   2% (1/36)   Counting objects:   5% (2/36)   Counting objects:   8% (3/36)   Counting objects:  11% (4/36)   Counting objects:  13% (5/36)   Counting objects:  16% (6/36)   Counting objects:  19% (7/36)   Counting objects:  22% (8/36)   Counting objects:  25% (9/36)   Counting objects:  27% (10/36)   Counting objects:  30% (11/36)   Counting objects:  33% (12/36)   Counting objects:  36% (13/36)   Counting objects:  38% (14/36)   Counting objects:  41% (15/36)   Counting objects:  44% (16/36)   Counting objects:  47% (17/36)   Counting objects:  50% (18/36)   Counting objects:  52% (19/36)   Counting objects:  55% (20/36)   Counting objects:  58% (21/36)   Counting objects:  61% (22/36)   Counting objects:  63% (23/36)   Counting objects:  66% (24/36)   Counting objects:  69% (25/36)   Counting objects:  72% (26/36)   Counting objects:  75% (27/36)   Counting objects:  77% (28/36)   Counting objects:  80% (29/36)   Counting objects:  83% (30/36)   Counting objects:  86% (31/36)   Counting objects:  88% (32/36)   Counting objects:  91% (33/36)   Counting objects:  94% (34/36)   Counting objects:  97% (35/36)   Counting objects: 100% (36/36)   Counting objects: 100% (36/36), done.
+Delta compression using up to 4 threads
+Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  60% (14/23), 1.08 MiB | 852.00 KiB/s   Writing objects:  60% (14/23), 2.95 MiB | 1.58 MiB/s   Writing objects:  65% (15/23), 3.38 MiB | 1.42 MiB/s   Writing objects:  65% (15/23), 5.22 MiB | 1.41 MiB/s   Writing objects:  65% (15/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  69% (16/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  73% (17/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  78% (18/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  82% (19/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  86% (20/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  91% (21/23), 11.19 MiB | 2.67 MiB/s   Writing objects:  91% (21/23), 13.09 MiB | 2.56 MiB/s   Writing objects:  95% (22/23), 13.09 MiB | 2.56 MiB/s   Writing objects: 100% (23/23), 13.09 MiB | 2.56 MiB/s   Writing objects: 100% (23/23), 16.03 MiB | 2.47 MiB/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)[Kremote: Resolving deltas:  16% (1/6)[Kremote: Resolving deltas:  33% (2/6)[Kremote: Resolving deltas:  50% (3/6)[Kremote: Resolving deltas:  66% (4/6)[Kremote: Resolving deltas:  83% (5/6)[Kremote: Resolving deltas: 100% (6/6)[Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   77effff..db75195  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "Data and Readme update"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "Data and Readme update"[1@;[1@2[1@C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[1P"[1Pe"[1Pe"[1Pe"[1P"[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[1Pe"[C[1P"[1P"[1P"[1P"[1P"[1P"0"1"[1P"0"1"-"D"a"t"a"-"R"e"a"d"i"n"g" "C"o"m"p"l"e"t"e"[1P"[1P"[1P"[1P"[1P"[1P"[1P"o"m"p"l"e"t"e"
+[master 9aea4ad] 001-Data-Reading Complete
+ 20 files changed, 543188 insertions(+), 542066 deletions(-)
+ rewrite .Rproj.user/57E07EBA/console06/INDEX001 (70%)
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/F0742DC5
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/2914B22B
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/2914B22B-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37-contents
+ rewrite .Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5-contents (97%)
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EEE742B0-contents
+ rewrite 01-data-prepare/001-Data-Reading.R (97%)
+ rename 01-data-prepare/Data/{ecommerce-data.csv => ecommerce-data/data001.csv} (52%)
+ mode change 100755 => 100644
+ create mode 100755 01-data-prepare/Data/ecommerce-data/data002.csv
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "001-Data-Reading Complete"add .[Kcommit -m "001-Data-Reading Complete"add .[Kpush -u origin master
+Enumerating objects: 48, done.
+Counting objects:   2% (1/48)   Counting objects:   4% (2/48)   Counting objects:   6% (3/48)   Counting objects:   8% (4/48)   Counting objects:  10% (5/48)   Counting objects:  12% (6/48)   Counting objects:  14% (7/48)   Counting objects:  16% (8/48)   Counting objects:  18% (9/48)   Counting objects:  20% (10/48)   Counting objects:  22% (11/48)   Counting objects:  25% (12/48)   Counting objects:  27% (13/48)   Counting objects:  29% (14/48)   Counting objects:  31% (15/48)   Counting objects:  33% (16/48)   Counting objects:  35% (17/48)   Counting objects:  37% (18/48)   Counting objects:  39% (19/48)   Counting objects:  41% (20/48)   Counting objects:  43% (21/48)   Counting objects:  45% (22/48)   Counting objects:  47% (23/48)   Counting objects:  50% (24/48)   Counting objects:  52% (25/48)   Counting objects:  54% (26/48)   Counting objects:  56% (27/48)   Counting objects:  58% (28/48)   Counting objects:  60% (29/48)   Counting objects:  62% (30/48)   Counting objects:  64% (31/48)   Counting objects:  66% (32/48)   Counting objects:  68% (33/48)   Counting objects:  70% (34/48)   Counting objects:  72% (35/48)   Counting objects:  75% (36/48)   Counting objects:  77% (37/48)   Counting objects:  79% (38/48)   Counting objects:  81% (39/48)   Counting objects:  83% (40/48)   Counting objects:  85% (41/48)   Counting objects:  87% (42/48)   Counting objects:  89% (43/48)   Counting objects:  91% (44/48)   Counting objects:  93% (45/48)   Counting objects:  95% (46/48)   Counting objects:  97% (47/48)   Counting objects: 100% (48/48)   Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects:   3% (1/28)   Compressing objects:   7% (2/28)   Compressing objects:  10% (3/28)   Compressing objects:  14% (4/28)   Compressing objects:  17% (5/28)   Compressing objects:  21% (6/28)   Compressing objects:  25% (7/28)   Compressing objects:  28% (8/28)   Compressing objects:  32% (9/28)   Compressing objects:  35% (10/28)   Compressing objects:  39% (11/28)   Compressing objects:  42% (12/28)   Compressing objects:  46% (13/28)   Compressing objects:  50% (14/28)   Compressing objects:  53% (15/28)   Compressing objects:  57% (16/28)   Compressing objects:  60% (17/28)   Compressing objects:  64% (18/28)   Compressing objects:  67% (19/28)   Compressing objects:  71% (20/28)   Compressing objects:  75% (21/28)   Compressing objects:  78% (22/28)   Compressing objects:  82% (23/28)   Compressing objects:  85% (24/28)   Compressing objects:  89% (25/28)   Compressing objects:  92% (26/28)   Compressing objects:  96% (27/28)   Compressing objects: 100% (28/28)   Compressing objects: 100% (28/28), done.
+Writing objects:   3% (1/28)   Writing objects:   7% (2/28)   Writing objects:  10% (3/28)   Writing objects:  14% (4/28)   Writing objects:  17% (5/28)   Writing objects:  21% (6/28)   Writing objects:  25% (7/28)   Writing objects:  28% (8/28)   Writing objects:  32% (9/28)   Writing objects:  35% (10/28)   Writing objects:  39% (11/28)   Writing objects:  42% (12/28)   Writing objects:  46% (13/28)   Writing objects:  50% (14/28)   Writing objects:  53% (15/28)   Writing objects:  57% (16/28)   Writing objects:  60% (17/28)   Writing objects:  64% (18/28)   Writing objects:  67% (19/28)   Writing objects:  71% (20/28)   Writing objects:  75% (21/28)   Writing objects:  78% (22/28)   Writing objects:  82% (23/28)   Writing objects:  85% (24/28)   Writing objects:  89% (25/28)   Writing objects:  92% (26/28)   Writing objects:  92% (26/28), 1.08 MiB | 614.00 KiB/s   Writing objects:  92% (26/28), 2.98 MiB | 749.00 KiB/s   Writing objects:  92% (26/28), 3.16 MiB | 651.00 KiB/s   Writing objects:  92% (26/28), 3.36 MiB | 534.00 KiB/s   Writing objects:  92% (26/28), 3.45 MiB | 440.00 KiB/s   Writing objects:  92% (26/28), 5.86 MiB | 662.00 KiB/s   Writing objects: 100% (28/28), 5.86 MiB | 662.00 KiB/s   Writing objects: 100% (28/28), 6.47 MiB | 709.00 KiB/s, done.
+Total 28 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)[Kremote: Resolving deltas:  10% (1/10)[Kremote: Resolving deltas:  20% (2/10)[Kremote: Resolving deltas:  30% (3/10)[Kremote: Resolving deltas:  40% (4/10)[Kremote: Resolving deltas:  50% (5/10)[Kremote: Resolving deltas:  60% (6/10)[Kremote: Resolving deltas:  70% (7/10)[Kremote: Resolving deltas:  80% (8/10)[Kremote: Resolving deltas:  90% (9/10)[Kremote: Resolving deltas: 100% (10/10)[Kremote: Resolving deltas: 100% (10/10), completed with 8 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   db75195..9aea4ad  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origiin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push -u origiin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "001-Data-Reading Complete"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origiin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "001-Data-Reading Complete"[C[C[C[C[C;"2"D"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca""d"d" "g"i"t"i"g"n"o"r"e" "[1P"
+[master b2136fb] add gitignore
+ 5 files changed, 35 insertions(+), 2 deletions(-)
+ rewrite .Rproj.user/57E07EBA/console06/INDEX001 (70%)
+ create mode 100644 .gitignore
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "addd gitignore"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush -u origiin master
+Enumerating objects: 26, done.
+Counting objects:   3% (1/26)   Counting objects:   7% (2/26)   Counting objects:  11% (3/26)   Counting objects:  15% (4/26)   Counting objects:  19% (5/26)   Counting objects:  23% (6/26)   Counting objects:  26% (7/26)   Counting objects:  30% (8/26)   Counting objects:  34% (9/26)   Counting objects:  38% (10/26)   Counting objects:  42% (11/26)   Counting objects:  46% (12/26)   Counting objects:  50% (13/26)   Counting objects:  53% (14/26)   Counting objects:  57% (15/26)   Counting objects:  61% (16/26)   Counting objects:  65% (17/26)   Counting objects:  69% (18/26)   Counting objects:  73% (19/26)   Counting objects:  76% (20/26)   Counting objects:  80% (21/26)   Counting objects:  84% (22/26)   Counting objects:  88% (23/26)   Counting objects:  92% (24/26)   Counting objects:  96% (25/26)   Counting objects: 100% (26/26)   Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   7% (1/14)   Writing objects:  14% (2/14)   Writing objects:  21% (3/14)   Writing objects:  28% (4/14)   Writing objects:  35% (5/14)   Writing objects:  42% (6/14)   Writing objects:  50% (7/14)   Writing objects:  57% (8/14)   Writing objects:  64% (9/14)   Writing objects:  71% (10/14)   Writing objects:  78% (11/14)   Writing objects:  85% (12/14)   Writing objects:  92% (13/14)   Writing objects: 100% (14/14)   Writing objects: 100% (14/14), 2.34 KiB | 1.17 MiB/s, done.
+Total 14 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/5)[Kremote: Resolving deltas:  20% (1/5)[Kremote: Resolving deltas:  40% (2/5)[Kremote: Resolving deltas:  60% (3/5)[Kremote: Resolving deltas:  80% (4/5)[Kremote: Resolving deltas: 100% (5/5)[Kremote: Resolving deltas: 100% (5/5), completed with 5 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   9aea4ad..b2136fb  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "add gitignore"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "add gitignore"
+[master 81a0579] add gitignore
+ 3 files changed, 22 insertions(+), 4 deletions(-)
+ rewrite .Rproj.user/57E07EBA/console06/INDEX001 (70%)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "add gitignore"add .[Kcommit -m "add gitignore"[Kgit commit -m "add gitignore"add .[Kpush -u origin master
+Enumerating objects: 15, done.
+Counting objects:   6% (1/15)   Counting objects:  13% (2/15)   Counting objects:  20% (3/15)   Counting objects:  26% (4/15)   Counting objects:  33% (5/15)   Counting objects:  40% (6/15)   Counting objects:  46% (7/15)   Counting objects:  53% (8/15)   Counting objects:  60% (9/15)   Counting objects:  66% (10/15)   Counting objects:  73% (11/15)   Counting objects:  80% (12/15)   Counting objects:  86% (13/15)   Counting objects:  93% (14/15)   Counting objects: 100% (15/15)   Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.36 KiB | 25.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   b2136fb..81a0579  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git rm -r --cached
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git rm -r --cached .Rproj.user
+rm '.Rproj.user/57E07EBA/console06/865B45F5'
+rm '.Rproj.user/57E07EBA/console06/865B45F5.env'
+rm '.Rproj.user/57E07EBA/console06/INDEX001'
+rm '.Rproj.user/57E07EBA/sources/prop/11A1548F'
+rm '.Rproj.user/57E07EBA/sources/prop/341A4E0B'
+rm '.Rproj.user/57E07EBA/sources/prop/355FEF33'
+rm '.Rproj.user/57E07EBA/sources/prop/3ADB2D3D'
+rm '.Rproj.user/57E07EBA/sources/prop/426CEF37'
+rm '.Rproj.user/57E07EBA/sources/prop/5742F716'
+rm '.Rproj.user/57E07EBA/sources/prop/5F586D7F'
+rm '.Rproj.user/57E07EBA/sources/prop/F0742DC5'
+rm '.Rproj.user/57E07EBA/sources/prop/INDEX'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/10567B13'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/10567B13-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/2914B22B'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/2914B22B-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/3724D352-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/64F21D50'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/64F21D50-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/7F638847-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/B33A1450'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/B33A1450-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/EEE742B0-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2-contents'
+rm '.Rproj.user/57E07EBA/sources/s-834198D8/lock_file'
+rm '.Rproj.user/shared/notebooks/patch-chunk-names'
+rm '.Rproj.user/shared/notebooks/paths'
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ a[Kgit add .
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git [K[K[K[Kgit add .[Krm -r --cached .Rproj.user[Kpush -u origin mastercommit -m "add gitignore"
+[master 8588b87] add gitignore
+ 32 files changed, 3481 deletions(-)
+ delete mode 100644 .Rproj.user/57E07EBA/console06/865B45F5
+ delete mode 100644 .Rproj.user/57E07EBA/console06/865B45F5.env
+ delete mode 100644 .Rproj.user/57E07EBA/console06/INDEX001
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/11A1548F
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/341A4E0B
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/355FEF33
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/3ADB2D3D
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/426CEF37
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/5742F716
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/5F586D7F
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/F0742DC5
+ delete mode 100644 .Rproj.user/57E07EBA/sources/prop/INDEX
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/10567B13
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/10567B13-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/2914B22B
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/2914B22B-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/3724D352-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/64F21D50
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/64F21D50-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7C4B3B37-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/7F638847-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B33A1450
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B33A1450-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/B9E569D5-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EEE742B0-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/EFBC25A2-contents
+ delete mode 100644 .Rproj.user/57E07EBA/sources/s-834198D8/lock_file
+ delete mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ delete mode 100644 .Rproj.user/shared/notebooks/paths
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "add gitignore"add .[K[Krm -r --cached .Rproj.user[Kpush -u origin master
+Enumerating objects: 3, done.
+Counting objects:  33% (1/3)   Counting objects:  66% (2/3)   Counting objects: 100% (3/3)   Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 222 bytes | 222.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/Joohyoung/R-usages.git
+   81a0579..8588b87  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "add gitignore"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "add gitignore"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"0"0"2"-"D"A"[1P"a"t"a" "T"[1P"[1P"-"T"y"p"e"-"C"h"a"n"g"e" "u"p"d"a"t"e"
+[master 8f84df1] 002-Data-Type-Change update
+ 2 files changed, 79 insertions(+), 43 deletions(-)
+ rewrite 01-data-prepare/002-Data-Type-Changes.R (76%)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "002-Data-Type-Change update"add .[Kpush -u origin master
+Enumerating objects: 9, done.
+Counting objects:  11% (1/9)   Counting objects:  22% (2/9)   Counting objects:  33% (3/9)   Counting objects:  44% (4/9)   Counting objects:  55% (5/9)   Counting objects:  66% (6/9)   Counting objects:  77% (7/9)   Counting objects:  88% (8/9)   Counting objects: 100% (9/9)   Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  20% (1/5)   Writing objects:  40% (2/5)   Writing objects:  60% (3/5)   Writing objects:  80% (4/5)   Writing objects: 100% (5/5)   Writing objects: 100% (5/5), 1.72 KiB | 1.72 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/Joohyoung/R-usages.git
+   8588b87..8f84df1  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git push -u origin mastercommit -m "002-Data-Type-Change update"add .[Kcommit -m "002-Data-Type-Change update"add .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git add .push -u origin mastercommit -m "002-Data-Type-Change update"
+[master 95cc59d] 002-Data-Type-Change update
+ 1 file changed, 116 insertions(+), 8 deletions(-)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "002-Data-Type-Change update"add .[Kpush -u origin master
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)   Counting objects:  28% (2/7)   Counting objects:  42% (3/7)   Counting objects:  57% (4/7)   Counting objects:  71% (5/7)   Counting objects:  85% (6/7)   Counting objects: 100% (7/7)   Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 3.61 KiB | 3.61 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/Joohyoung/R-usages.git
+   8f84df1..95cc59d  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/001-dev/002-r/R-usages[?1034h(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ exitq[KLqlsexitsh -c "$(curl -fsSL https://raw.githubuserconntent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"[A[C[12Pbrew install zsh zsh-completions
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[2Plssl[1Plexit[K[K[K[K햣 ㅁ[K[K[Kgit add .
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ git commit -m "TS [K[KimeSereis anayls[K[K[K[K[K[KAnalysis s[Kcase0 u[K[K[K1 upd ate"
+[master 2228c08] TimeSereis Analysis case1 update
+ 10 files changed, 6559762 insertions(+), 5 deletions(-)
+ create mode 100644 .RData
+ create mode 100644 .Rhistory
+ create mode 100644 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv
+ create mode 100644 08-Solve-RealData-Problems/01-Funda/data/submission.csv
+ create mode 100644 08-Solve-RealData-Problems/Funda-scripts.R
+ create mode 100644 TimeSeriesAnalysisCase1/TutorialCode.R
+ create mode 100644 TimeSeriesAnalysisCase1/chartOfData.png
+ create mode 100644 TimeSeriesAnalysisCase1/search_rhinitis.csv
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ co[K[Kgit -[Kpush -u origin master
+Enumerating objects: 19, done.
+Counting objects:   5% (1/19)   Counting objects:  10% (2/19)   Counting objects:  15% (3/19)   Counting objects:  21% (4/19)   Counting objects:  26% (5/19)   Counting objects:  31% (6/19)   Counting objects:  36% (7/19)   Counting objects:  42% (8/19)   Counting objects:  47% (9/19)   Counting objects:  52% (10/19)   Counting objects:  57% (11/19)   Counting objects:  63% (12/19)   Counting objects:  68% (13/19)   Counting objects:  73% (14/19)   Counting objects:  78% (15/19)   Counting objects:  84% (16/19)   Counting objects:  89% (17/19)   Counting objects:  94% (18/19)   Counting objects: 100% (19/19)   Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects:   6% (1/15)   Compressing objects:  13% (2/15)   Compressing objects:  20% (3/15)   Compressing objects:  26% (4/15)   Compressing objects:  33% (5/15)   Compressing objects:  40% (6/15)   Compressing objects:  46% (7/15)   Compressing objects:  53% (8/15)   Compressing objects:  60% (9/15)   Compressing objects:  66% (10/15)   Compressing objects:  73% (11/15)   Compressing objects:  80% (12/15)   Compressing objects:  86% (13/15)   Compressing objects:  93% (14/15)   Compressing objects: 100% (15/15)   Compressing objects: 100% (15/15), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  12% (2/16), 1.07 MiB | 888.00 KiB/s   Writing objects:  12% (2/16), 2.55 MiB | 1.28 MiB/s   Writing objects:  12% (2/16), 6.98 MiB | 2.81 MiB/s   Writing objects:  12% (2/16), 18.52 MiB | 5.28 MiB/s   Writing objects:  12% (2/16), 29.64 MiB | 6.57 MiB/s   Writing objects:  12% (2/16), 40.95 MiB | 7.42 MiB/s   Writing objects:  12% (2/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  18% (3/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  25% (4/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  31% (5/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  37% (6/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  43% (7/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  50% (8/16), 52.14 MiB | 10.92 MiB/s   Writing objects:  50% (8/16), 55.65 MiB | 2.93 MiB/s   Writing objects:  50% (8/16), 59.57 MiB | 2.83 MiB/s   Writing objects:  50% (8/16), 71.62 MiB | 2.86 MiB/s   Writing objects:  50% (8/16), 82.98 MiB | 2.86 MiB/s   Writing objects:  50% (8/16), 94.09 MiB | 2.86 MiB/s   Writing objects:  50% (8/16), 105.41 MiB | 10.86 MiB/s   Writing objects:  56% (9/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  62% (10/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  68% (11/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  75% (12/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  81% (13/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  87% (14/16), 111.16 MiB | 11.31 MiB/s   Writing objects:  93% (15/16), 111.16 MiB | 11.31 MiB/s   Writing objects: 100% (16/16), 111.16 MiB | 11.31 MiB/s   Writing objects: 100% (16/16), 114.10 MiB | 4.20 MiB/s, done.
+Total 16 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: d973de1021943eb6a4151cbf452a2ada[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeon$ [K(base) jeonjuhyeong-ui-MacBook-Pro:R-usagess JoohyoungJeon$ 햣 ㄱ[K[K[Kgit rm -r --cached .
+rm '.RData'
+rm '.Rhistory'
+rm '.gitignore'
+rm '01-data-prepare/001-Data-Reading.R'
+rm '01-data-prepare/002-Data-Type-Changes.R'
+rm '01-data-prepare/Data/Historical Product Demand.csv'
+rm '01-data-prepare/Data/ecommerce-data/data001.csv'
+rm '01-data-prepare/Data/ecommerce-data/data002.csv'
+rm '01-data-prepare/Data/tv-sales-forecast.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/features.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/stores.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/test.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/train.csv'
+rm '08-Solve-RealData-Problems/01-Funda/data/funda_train.csv'
+rm '08-Solve-RealData-Problems/01-Funda/data/submission.csv'
+rm '08-Solve-RealData-Problems/Funda-scripts.R'
+rm 'R-usages.Rproj'
+rm 'README.md'
+rm 'TimeSeriesAnalysisCase1/TutorialCode.R'
+rm 'TimeSeriesAnalysisCase1/chartOfData.png'
+rm 'TimeSeriesAnalysisCase1/search_rhinitis.csv'
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usagess JoohyoungJeon$ git add .
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usagess JoohyoungJeon$ git commit -m "08[K[KTS [K[KimeSeries  Analysis Case1 update"
+[master 1470199] TimeSeries Analysis Case1 update
+ 3 files changed, 3 insertions(+), 512 deletions(-)
+ delete mode 100644 .RData
+ delete mode 100644 .Rhistory
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usagess JoohyoungJeon$ git push
+Enumerating objects: 22, done.
+Counting objects:   4% (1/22)   Counting objects:   9% (2/22)   Counting objects:  13% (3/22)   Counting objects:  18% (4/22)   Counting objects:  22% (5/22)   Counting objects:  27% (6/22)   Counting objects:  31% (7/22)   Counting objects:  36% (8/22)   Counting objects:  40% (9/22)   Counting objects:  45% (10/22)   Counting objects:  50% (11/22)   Counting objects:  54% (12/22)   Counting objects:  59% (13/22)   Counting objects:  63% (14/22)   Counting objects:  68% (15/22)   Counting objects:  72% (16/22)   Counting objects:  77% (17/22)   Counting objects:  81% (18/22)   Counting objects:  86% (19/22)   Counting objects:  90% (20/22)   Counting objects:  95% (21/22)   Counting objects: 100% (22/22)   Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects:   5% (1/18)   Compressing objects:  11% (2/18)   Compressing objects:  16% (3/18)   Compressing objects:  22% (4/18)   Compressing objects:  27% (5/18)   Compressing objects:  33% (6/18)   Compressing objects:  38% (7/18)   Compressing objects:  44% (8/18)   Compressing objects:  50% (9/18)   Compressing objects:  55% (10/18)   Compressing objects:  61% (11/18)   Compressing objects:  66% (12/18)   Compressing objects:  72% (13/18)   Compressing objects:  77% (14/18)   Compressing objects:  83% (15/18)   Compressing objects:  88% (16/18)   Compressing objects:  94% (17/18)   Compressing objects: 100% (18/18)   Compressing objects: 100% (18/18), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  42% (8/19), 1.07 MiB | 844.00 KiB/s   Writing objects:  42% (8/19), 4.55 MiB | 1.95 MiB/s   Writing objects:  42% (8/19), 15.90 MiB | 4.74 MiB/s   Writing objects:  42% (8/19), 26.34 MiB | 6.02 MiB/s   Writing objects:  42% (8/19), 36.59 MiB | 6.78 MiB/s   Writing objects:  42% (8/19), 44.63 MiB | 9.09 MiB/s   Writing objects:  42% (8/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  47% (9/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  52% (10/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  57% (11/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  63% (12/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  68% (13/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  73% (14/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  78% (15/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  84% (16/19), 55.77 MiB | 9.90 MiB/s   Writing objects:  84% (16/19), 58.46 MiB | 6.30 MiB/s   Writing objects:  84% (16/19), 70.54 MiB | 6.56 MiB/s   Writing objects:  84% (16/19), 81.89 MiB | 6.74 MiB/s   Writing objects:  84% (16/19), 93.20 MiB | 7.22 MiB/s   Writing objects:  84% (16/19), 104.33 MiB | 7.22 MiB/s   Writing objects:  89% (17/19), 109.89 MiB | 11.34 MiB/s   Writing objects:  94% (18/19), 109.89 MiB | 11.34 MiB/s   Writing objects: 100% (19/19), 109.89 MiB | 11.34 MiB/s   Writing objects: 100% (19/19), 114.10 MiB | 4.23 MiB/s, done.
+Total 19 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 1 local object.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: 1c918a8de09a5e899f2132b42d9bda2d[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git push[Kcommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C
+rm '.gitignore'
+rm '01-data-prepare/001-Data-Reading.R'
+rm '01-data-prepare/002-Data-Type-Changes.R'
+rm '01-data-prepare/Data/Historical Product Demand.csv'
+rm '01-data-prepare/Data/ecommerce-data/data001.csv'
+rm '01-data-prepare/Data/ecommerce-data/data002.csv'
+rm '01-data-prepare/Data/tv-sales-forecast.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/features.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/stores.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/test.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/train.csv'
+rm '08-Solve-RealData-Problems/01-Funda/data/funda_train.csv'
+rm '08-Solve-RealData-Problems/01-Funda/data/submission.csv'
+rm '08-Solve-RealData-Problems/Funda-scripts.R'
+rm 'R-usages.Rproj'
+rm 'README.md'
+rm 'TimeSeriesAnalysisCase1/TutorialCode.R'
+rm 'TimeSeriesAnalysisCase1/chartOfData.png'
+rm 'TimeSeriesAnalysisCase1/search_rhinitis.csv'
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git rm -r --cached .[C[C[C[C[C[C[Cpus[Kcommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpus[Kcommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[Kcommit -m "TimeSeries Analysis Case1 update"
+[master 5214d18] TimeSeries Analysis Case1 update
+ 51 files changed, 2470 insertions(+), 6558588 deletions(-)
+ create mode 100644 .Rproj.user/57E07EBA/console06/865B45F5
+ create mode 100644 .Rproj.user/57E07EBA/console06/865B45F5.env
+ create mode 100644 .Rproj.user/57E07EBA/console06/INDEX001
+ create mode 100644 .Rproj.user/57E07EBA/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/57E07EBA/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/57E07EBA/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/57E07EBA/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/57E07EBA/persistent-state
+ create mode 100644 .Rproj.user/57E07EBA/rmd-outputs
+ create mode 100644 .Rproj.user/57E07EBA/saved_source_markers
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/11A1548F
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/18606F2A
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/340B4116
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/341A4E0B
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/355FEF33
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/3ADB2D3D
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/426CEF37
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/5742F716
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/5F586D7F
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/73BFDD21
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/79BAE69E
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/79F2F4F9
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/8528B9DA
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/9C6D73BA
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/BE94CAA6
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/C03EA9AA
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/D8355C09
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/F0742DC5
+ create mode 100644 .Rproj.user/57E07EBA/sources/prop/INDEX
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/303676C6
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/303676C6-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/ADE80FAA-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/D2BDAB78-contents
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF
+ rename 08-Solve-RealData-Problems/Funda-scripts.R => .Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF-contents (100%)
+ create mode 100644 .Rproj.user/57E07EBA/sources/s-74C2E744/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ delete mode 100644 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv
+ delete mode 100644 08-Solve-RealData-Problems/01-Funda/data/submission.csv
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git commit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[Kcommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpus[K[K[K[Kpish [K[K[K[Kush -u origin master
+Enumerating objects: 72, done.
+Counting objects:   1% (1/72)   Counting objects:   2% (2/72)   Counting objects:   4% (3/72)   Counting objects:   5% (4/72)   Counting objects:   6% (5/72)   Counting objects:   8% (6/72)   Counting objects:   9% (7/72)   Counting objects:  11% (8/72)   Counting objects:  12% (9/72)   Counting objects:  13% (10/72)   Counting objects:  15% (11/72)   Counting objects:  16% (12/72)   Counting objects:  18% (13/72)   Counting objects:  19% (14/72)   Counting objects:  20% (15/72)   Counting objects:  22% (16/72)   Counting objects:  23% (17/72)   Counting objects:  25% (18/72)   Counting objects:  26% (19/72)   Counting objects:  27% (20/72)   Counting objects:  29% (21/72)   Counting objects:  30% (22/72)   Counting objects:  31% (23/72)   Counting objects:  33% (24/72)   Counting objects:  34% (25/72)   Counting objects:  36% (26/72)   Counting objects:  37% (27/72)   Counting objects:  38% (28/72)   Counting objects:  40% (29/72)   Counting objects:  41% (30/72)   Counting objects:  43% (31/72)   Counting objects:  44% (32/72)   Counting objects:  45% (33/72)   Counting objects:  47% (34/72)   Counting objects:  48% (35/72)   Counting objects:  50% (36/72)   Counting objects:  51% (37/72)   Counting objects:  52% (38/72)   Counting objects:  54% (39/72)   Counting objects:  55% (40/72)   Counting objects:  56% (41/72)   Counting objects:  58% (42/72)   Counting objects:  59% (43/72)   Counting objects:  61% (44/72)   Counting objects:  62% (45/72)   Counting objects:  63% (46/72)   Counting objects:  65% (47/72)   Counting objects:  66% (48/72)   Counting objects:  68% (49/72)   Counting objects:  69% (50/72)   Counting objects:  70% (51/72)   Counting objects:  72% (52/72)   Counting objects:  73% (53/72)   Counting objects:  75% (54/72)   Counting objects:  76% (55/72)   Counting objects:  77% (56/72)   Counting objects:  79% (57/72)   Counting objects:  80% (58/72)   Counting objects:  81% (59/72)   Counting objects:  83% (60/72)   Counting objects:  84% (61/72)   Counting objects:  86% (62/72)   Counting objects:  87% (63/72)   Counting objects:  88% (64/72)   Counting objects:  90% (65/72)   Counting objects:  91% (66/72)   Counting objects:  93% (67/72)   Counting objects:  94% (68/72)   Counting objects:  95% (69/72)   Counting objects:  97% (70/72)   Counting objects:  98% (71/72)   Counting objects: 100% (72/72)   Counting objects: 100% (72/72), done.
+Delta compression using up to 4 threads
+Compressing objects:   1% (1/63)   Compressing objects:   3% (2/63)   Compressing objects:   4% (3/63)   Compressing objects:   6% (4/63)   Compressing objects:   7% (5/63)   Compressing objects:   9% (6/63)   Compressing objects:  11% (7/63)   Compressing objects:  12% (8/63)   Compressing objects:  14% (9/63)   Compressing objects:  15% (10/63)   Compressing objects:  17% (11/63)   Compressing objects:  19% (12/63)   Compressing objects:  20% (13/63)   Compressing objects:  22% (14/63)   Compressing objects:  23% (15/63)   Compressing objects:  25% (16/63)   Compressing objects:  26% (17/63)   Compressing objects:  28% (18/63)   Compressing objects:  30% (19/63)   Compressing objects:  31% (20/63)   Compressing objects:  33% (21/63)   Compressing objects:  34% (22/63)   Compressing objects:  36% (23/63)   Compressing objects:  38% (24/63)   Compressing objects:  39% (25/63)   Compressing objects:  41% (26/63)   Compressing objects:  42% (27/63)   Compressing objects:  44% (28/63)   Compressing objects:  46% (29/63)   Compressing objects:  47% (30/63)   Compressing objects:  49% (31/63)   Compressing objects:  50% (32/63)   Compressing objects:  52% (33/63)   Compressing objects:  53% (34/63)   Compressing objects:  55% (35/63)   Compressing objects:  57% (36/63)   Compressing objects:  58% (37/63)   Compressing objects:  60% (38/63)   Compressing objects:  61% (39/63)   Compressing objects:  63% (40/63)   Compressing objects:  65% (41/63)   Compressing objects:  66% (42/63)   Compressing objects:  68% (43/63)   Compressing objects:  69% (44/63)   Compressing objects:  71% (45/63)   Compressing objects:  73% (46/63)   Compressing objects:  74% (47/63)   Compressing objects:  76% (48/63)   Compressing objects:  77% (49/63)   Compressing objects:  79% (50/63)   Compressing objects:  80% (51/63)   Compressing objects:  82% (52/63)   Compressing objects:  84% (53/63)   Compressing objects:  85% (54/63)   Compressing objects:  87% (55/63)   Compressing objects:  88% (56/63)   Compressing objects:  90% (57/63)   Compressing objects:  92% (58/63)   Compressing objects:  93% (59/63)   Compressing objects:  95% (60/63)   Compressing objects:  96% (61/63)   Compressing objects:  98% (62/63)   Compressing objects: 100% (63/63)   Compressing objects: 100% (63/63), done.
+Writing objects:   1% (1/70)   Writing objects:   2% (2/70)   Writing objects:   4% (3/70)   Writing objects:   5% (4/70)   Writing objects:   7% (5/70)   Writing objects:   8% (6/70)   Writing objects:  10% (7/70)   Writing objects:  11% (8/70)   Writing objects:  12% (9/70)   Writing objects:  14% (10/70)   Writing objects:  15% (11/70)   Writing objects:  17% (12/70)   Writing objects:  18% (13/70)   Writing objects:  20% (14/70)   Writing objects:  21% (15/70)   Writing objects:  22% (16/70)   Writing objects:  24% (17/70)   Writing objects:  25% (18/70)   Writing objects:  27% (19/70)   Writing objects:  28% (20/70)   Writing objects:  30% (21/70)   Writing objects:  31% (22/70)   Writing objects:  32% (23/70)   Writing objects:  34% (24/70)   Writing objects:  35% (25/70)   Writing objects:  37% (26/70)   Writing objects:  38% (27/70)   Writing objects:  40% (28/70)   Writing objects:  41% (29/70)   Writing objects:  42% (30/70)   Writing objects:  44% (31/70)   Writing objects:  45% (32/70)   Writing objects:  47% (33/70)   Writing objects:  48% (34/70)   Writing objects:  50% (35/70)   Writing objects:  51% (36/70)   Writing objects:  52% (37/70)   Writing objects:  54% (38/70)   Writing objects:  55% (39/70)   Writing objects:  57% (40/70)   Writing objects:  61% (43/70)   Writing objects:  62% (44/70)   Writing objects:  64% (45/70)   Writing objects:  65% (46/70)   Writing objects:  67% (47/70)   Writing objects:  68% (48/70)   Writing objects:  70% (49/70)   Writing objects:  71% (50/70)   Writing objects:  72% (51/70)   Writing objects:  74% (52/70)   Writing objects:  75% (53/70)   Writing objects:  77% (54/70)   Writing objects:  78% (55/70)   Writing objects:  80% (56/70)   Writing objects:  81% (57/70)   Writing objects:  82% (58/70)   Writing objects:  84% (59/70)   Writing objects:  87% (61/70)   Writing objects:  88% (62/70)   Writing objects:  90% (63/70)   Writing objects:  91% (64/70)   Writing objects:  92% (65/70)   Writing objects:  92% (65/70), 136.00 KiB | 10.00 KiB/s   Writing objects:  92% (65/70), 1.07 MiB | 82.00 KiB/s   Writing objects:  92% (65/70), 5.23 MiB | 364.00 KiB/s   Writing objects:  92% (65/70), 11.34 MiB | 765.00 KiB/s   Writing objects:  92% (65/70), 22.40 MiB | 1.38 MiB/s   Writing objects:  92% (65/70), 33.71 MiB | 1.96 MiB/s   Writing objects:  92% (65/70), 44.88 MiB | 8.82 MiB/s   Writing objects:  92% (65/70), 56.18 MiB | 11.25 MiB/s   Writing objects:  94% (66/70), 56.18 MiB | 11.25 MiB/s   Writing objects:  95% (67/70), 56.18 MiB | 11.25 MiB/s   Writing objects:  95% (67/70), 58.48 MiB | 6.68 MiB/s   Writing objects:  95% (67/70), 70.18 MiB | 6.76 MiB/s   Writing objects:  95% (67/70), 81.89 MiB | 6.82 MiB/s   Writing objects:  95% (67/70), 93.27 MiB | 6.86 MiB/s   Writing objects:  95% (67/70), 104.37 MiB | 6.82 MiB/s   Writing objects:  97% (68/70), 109.99 MiB | 11.36 MiB/s   Writing objects:  98% (69/70), 109.99 MiB | 11.36 MiB/s   Writing objects: 100% (70/70), 109.99 MiB | 11.36 MiB/s   Writing objects: 100% (70/70), 114.12 MiB | 4.21 MiB/s, done.
+Total 70 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), done.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: dd2dbeece473f09a846759a8c0a80f95[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git push -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush[Krm -r --cached .
+rm '.Rproj.user/57E07EBA/console06/865B45F5'
+rm '.Rproj.user/57E07EBA/console06/865B45F5.env'
+rm '.Rproj.user/57E07EBA/console06/INDEX001'
+rm '.Rproj.user/57E07EBA/pcs/files-pane.pper'
+rm '.Rproj.user/57E07EBA/pcs/source-pane.pper'
+rm '.Rproj.user/57E07EBA/pcs/windowlayoutstate.pper'
+rm '.Rproj.user/57E07EBA/pcs/workbench-pane.pper'
+rm '.Rproj.user/57E07EBA/persistent-state'
+rm '.Rproj.user/57E07EBA/rmd-outputs'
+rm '.Rproj.user/57E07EBA/saved_source_markers'
+rm '.Rproj.user/57E07EBA/sources/prop/11A1548F'
+rm '.Rproj.user/57E07EBA/sources/prop/18606F2A'
+rm '.Rproj.user/57E07EBA/sources/prop/340B4116'
+rm '.Rproj.user/57E07EBA/sources/prop/341A4E0B'
+rm '.Rproj.user/57E07EBA/sources/prop/355FEF33'
+rm '.Rproj.user/57E07EBA/sources/prop/3ADB2D3D'
+rm '.Rproj.user/57E07EBA/sources/prop/426CEF37'
+rm '.Rproj.user/57E07EBA/sources/prop/5742F716'
+rm '.Rproj.user/57E07EBA/sources/prop/5F586D7F'
+rm '.Rproj.user/57E07EBA/sources/prop/73BFDD21'
+rm '.Rproj.user/57E07EBA/sources/prop/79BAE69E'
+rm '.Rproj.user/57E07EBA/sources/prop/79F2F4F9'
+rm '.Rproj.user/57E07EBA/sources/prop/8528B9DA'
+rm '.Rproj.user/57E07EBA/sources/prop/9C6D73BA'
+rm '.Rproj.user/57E07EBA/sources/prop/BE94CAA6'
+rm '.Rproj.user/57E07EBA/sources/prop/C03EA9AA'
+rm '.Rproj.user/57E07EBA/sources/prop/D8355C09'
+rm '.Rproj.user/57E07EBA/sources/prop/F0742DC5'
+rm '.Rproj.user/57E07EBA/sources/prop/INDEX'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/303676C6'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/303676C6-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/ADE80FAA-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/D2BDAB78-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/lock_file'
+rm '.Rproj.user/shared/notebooks/patch-chunk-names'
+rm '.Rproj.user/shared/notebooks/paths'
+rm '.gitignore'
+rm '01-data-prepare/001-Data-Reading.R'
+rm '01-data-prepare/002-Data-Type-Changes.R'
+rm '01-data-prepare/Data/Historical Product Demand.csv'
+rm '01-data-prepare/Data/ecommerce-data/data001.csv'
+rm '01-data-prepare/Data/ecommerce-data/data002.csv'
+rm '01-data-prepare/Data/tv-sales-forecast.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/features.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/stores.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/test.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/train.csv'
+rm 'R-usages.Rproj'
+rm 'README.md'
+rm 'TimeSeriesAnalysisCase1/TutorialCode.R'
+rm 'TimeSeriesAnalysisCase1/chartOfData.png'
+rm 'TimeSeriesAnalysisCase1/search_rhinitis.csv'
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git rm -r --cached .[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"
+[master c481a2e] TimeSeries Analysis Case1 update
+ 4 files changed, 144 insertions(+), 9 deletions(-)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git commit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master
+Enumerating objects: 82, done.
+Counting objects:   1% (1/82)   Counting objects:   2% (2/82)   Counting objects:   3% (3/82)   Counting objects:   4% (4/82)   Counting objects:   6% (5/82)   Counting objects:   7% (6/82)   Counting objects:   8% (7/82)   Counting objects:   9% (8/82)   Counting objects:  10% (9/82)   Counting objects:  12% (10/82)   Counting objects:  13% (11/82)   Counting objects:  14% (12/82)   Counting objects:  15% (13/82)   Counting objects:  17% (14/82)   Counting objects:  18% (15/82)   Counting objects:  19% (16/82)   Counting objects:  20% (17/82)   Counting objects:  21% (18/82)   Counting objects:  23% (19/82)   Counting objects:  24% (20/82)   Counting objects:  25% (21/82)   Counting objects:  26% (22/82)   Counting objects:  28% (23/82)   Counting objects:  29% (24/82)   Counting objects:  30% (25/82)   Counting objects:  31% (26/82)   Counting objects:  32% (27/82)   Counting objects:  34% (28/82)   Counting objects:  35% (29/82)   Counting objects:  36% (30/82)   Counting objects:  37% (31/82)   Counting objects:  39% (32/82)   Counting objects:  40% (33/82)   Counting objects:  41% (34/82)   Counting objects:  42% (35/82)   Counting objects:  43% (36/82)   Counting objects:  45% (37/82)   Counting objects:  46% (38/82)   Counting objects:  47% (39/82)   Counting objects:  48% (40/82)   Counting objects:  50% (41/82)   Counting objects:  51% (42/82)   Counting objects:  52% (43/82)   Counting objects:  53% (44/82)   Counting objects:  54% (45/82)   Counting objects:  56% (46/82)   Counting objects:  57% (47/82)   Counting objects:  58% (48/82)   Counting objects:  59% (49/82)   Counting objects:  60% (50/82)   Counting objects:  62% (51/82)   Counting objects:  63% (52/82)   Counting objects:  64% (53/82)   Counting objects:  65% (54/82)   Counting objects:  67% (55/82)   Counting objects:  68% (56/82)   Counting objects:  69% (57/82)   Counting objects:  70% (58/82)   Counting objects:  71% (59/82)   Counting objects:  73% (60/82)   Counting objects:  74% (61/82)   Counting objects:  75% (62/82)   Counting objects:  76% (63/82)   Counting objects:  78% (64/82)   Counting objects:  79% (65/82)   Counting objects:  80% (66/82)   Counting objects:  81% (67/82)   Counting objects:  82% (68/82)   Counting objects:  84% (69/82)   Counting objects:  85% (70/82)   Counting objects:  86% (71/82)   Counting objects:  87% (72/82)   Counting objects:  89% (73/82)   Counting objects:  90% (74/82)   Counting objects:  91% (75/82)   Counting objects:  92% (76/82)   Counting objects:  93% (77/82)   Counting objects:  95% (78/82)   Counting objects:  96% (79/82)   Counting objects:  97% (80/82)   Counting objects:  98% (81/82)   Counting objects: 100% (82/82)   Counting objects: 100% (82/82), done.
+Delta compression using up to 4 threads
+Compressing objects:   1% (1/73)   Compressing objects:   2% (2/73)   Compressing objects:   4% (3/73)   Compressing objects:   5% (4/73)   Compressing objects:   6% (5/73)   Compressing objects:   8% (6/73)   Compressing objects:   9% (7/73)   Compressing objects:  10% (8/73)   Compressing objects:  12% (9/73)   Compressing objects:  13% (10/73)   Compressing objects:  15% (11/73)   Compressing objects:  16% (12/73)   Compressing objects:  17% (13/73)   Compressing objects:  19% (14/73)   Compressing objects:  20% (15/73)   Compressing objects:  21% (16/73)   Compressing objects:  23% (17/73)   Compressing objects:  24% (18/73)   Compressing objects:  26% (19/73)   Compressing objects:  27% (20/73)   Compressing objects:  28% (21/73)   Compressing objects:  30% (22/73)   Compressing objects:  31% (23/73)   Compressing objects:  32% (24/73)   Compressing objects:  34% (25/73)   Compressing objects:  35% (26/73)   Compressing objects:  36% (27/73)   Compressing objects:  38% (28/73)   Compressing objects:  39% (29/73)   Compressing objects:  41% (30/73)   Compressing objects:  42% (31/73)   Compressing objects:  43% (32/73)   Compressing objects:  45% (33/73)   Compressing objects:  46% (34/73)   Compressing objects:  47% (35/73)   Compressing objects:  49% (36/73)   Compressing objects:  50% (37/73)   Compressing objects:  52% (38/73)   Compressing objects:  53% (39/73)   Compressing objects:  54% (40/73)   Compressing objects:  56% (41/73)   Compressing objects:  57% (42/73)   Compressing objects:  58% (43/73)   Compressing objects:  60% (44/73)   Compressing objects:  61% (45/73)   Compressing objects:  63% (46/73)   Compressing objects:  64% (47/73)   Compressing objects:  65% (48/73)   Compressing objects:  67% (49/73)   Compressing objects:  68% (50/73)   Compressing objects:  69% (51/73)   Compressing objects:  71% (52/73)   Compressing objects:  72% (53/73)   Compressing objects:  73% (54/73)   Compressing objects:  75% (55/73)   Compressing objects:  76% (56/73)   Compressing objects:  78% (57/73)   Compressing objects:  79% (58/73)   Compressing objects:  80% (59/73)   Compressing objects:  82% (60/73)   Compressing objects:  83% (61/73)   Compressing objects:  84% (62/73)   Compressing objects:  86% (63/73)   Compressing objects:  87% (64/73)   Compressing objects:  89% (65/73)   Compressing objects:  90% (66/73)   Compressing objects:  91% (67/73)   Compressing objects:  93% (68/73)   Compressing objects:  94% (69/73)   Compressing objects:  95% (70/73)   Compressing objects:  97% (71/73)   Compressing objects:  98% (72/73)   Compressing objects: 100% (73/73)   Compressing objects: 100% (73/73), done.
+Writing objects:   1% (1/80)   Writing objects:   2% (2/80)   Writing objects:   3% (3/80)   Writing objects:   5% (4/80)   Writing objects:   6% (5/80)   Writing objects:   7% (6/80)   Writing objects:   8% (7/80)   Writing objects:  10% (8/80)   Writing objects:  11% (9/80)   Writing objects:  12% (10/80)   Writing objects:  13% (11/80)   Writing objects:  15% (12/80)   Writing objects:  16% (13/80)   Writing objects:  17% (14/80)   Writing objects:  18% (15/80)   Writing objects:  20% (16/80)   Writing objects:  21% (17/80)   Writing objects:  22% (18/80)   Writing objects:  23% (19/80)   Writing objects:  25% (20/80)   Writing objects:  26% (21/80)   Writing objects:  27% (22/80)   Writing objects:  28% (23/80)   Writing objects:  30% (24/80)   Writing objects:  31% (25/80)   Writing objects:  32% (26/80)   Writing objects:  33% (27/80)   Writing objects:  35% (28/80)   Writing objects:  36% (29/80)   Writing objects:  37% (30/80)   Writing objects:  38% (31/80)   Writing objects:  40% (32/80)   Writing objects:  41% (33/80)   Writing objects:  42% (34/80)   Writing objects:  43% (35/80)   Writing objects:  45% (36/80)   Writing objects:  46% (37/80)   Writing objects:  47% (38/80)   Writing objects:  48% (39/80)   Writing objects:  50% (40/80)   Writing objects:  51% (41/80)   Writing objects:  53% (43/80)   Writing objects:  55% (44/80)   Writing objects:  56% (45/80)   Writing objects:  57% (46/80)   Writing objects:  58% (47/80)   Writing objects:  61% (49/80)   Writing objects:  62% (50/80)   Writing objects:  63% (51/80)   Writing objects:  65% (52/80)   Writing objects:  66% (53/80)   Writing objects:  67% (54/80)   Writing objects:  68% (55/80)   Writing objects:  70% (56/80)   Writing objects:  71% (57/80)   Writing objects:  72% (58/80)   Writing objects:  73% (59/80)   Writing objects:  75% (60/80)   Writing objects:  76% (61/80)   Writing objects:  77% (62/80)   Writing objects:  78% (63/80)   Writing objects:  80% (64/80)   Writing objects:  81% (65/80)   Writing objects:  82% (66/80)   Writing objects:  83% (67/80)   Writing objects:  85% (68/80)   Writing objects:  86% (69/80)   Writing objects:  88% (71/80)   Writing objects:  90% (72/80)   Writing objects:  91% (73/80)   Writing objects:  92% (74/80)   Writing objects:  93% (75/80)   Writing objects:  93% (75/80), 136.00 KiB | 10.00 KiB/s   Writing objects:  93% (75/80), 1.07 MiB | 77.00 KiB/s   Writing objects:  93% (75/80), 7.14 MiB | 481.00 KiB/s   Writing objects:  93% (75/80), 15.59 MiB | 980.00 KiB/s   Writing objects:  93% (75/80), 23.22 MiB | 1.33 MiB/s   Writing objects:  93% (75/80), 29.25 MiB | 5.02 MiB/s   Writing objects:  93% (75/80), 34.87 MiB | 6.71 MiB/s   Writing objects:  93% (75/80), 46.41 MiB | 8.01 MiB/s   Writing objects:  93% (75/80), 56.57 MiB | 8.52 MiB/s   Writing objects:  95% (76/80), 56.57 MiB | 8.52 MiB/s   Writing objects:  96% (77/80), 56.57 MiB | 8.52 MiB/s   Writing objects:  96% (77/80), 58.48 MiB | 5.57 MiB/s   Writing objects:  96% (77/80), 64.80 MiB | 6.05 MiB/s   Writing objects:  96% (77/80), 76.11 MiB | 6.93 MiB/s   Writing objects:  96% (77/80), 87.30 MiB | 6.93 MiB/s   Writing objects:  96% (77/80), 98.68 MiB | 7.09 MiB/s   Writing objects:  96% (77/80), 109.87 MiB | 11.33 MiB/s   Writing objects:  97% (78/80), 109.87 MiB | 11.33 MiB/s   Writing objects:  98% (79/80), 109.87 MiB | 11.33 MiB/s   Writing objects: 100% (80/80), 109.87 MiB | 11.33 MiB/s   Writing objects: 100% (80/80), 114.13 MiB | 3.97 MiB/s, done.
+Total 80 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[Kremote: Resolving deltas:  16% (2/12)[Kremote: Resolving deltas:  25% (3/12)[Kremote: Resolving deltas:  33% (4/12)[Kremote: Resolving deltas:  75% (9/12)[Kremote: Resolving deltas:  83% (10/12)[Kremote: Resolving deltas:  91% (11/12)[Kremote: Resolving deltas: 100% (12/12)[Kremote: Resolving deltas: 100% (12/12), done.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: 39de034b2a659a533341e57c11c60c0a[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git push -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C
+rm '.Rproj.user/57E07EBA/console06/865B45F5'
+rm '.Rproj.user/57E07EBA/console06/865B45F5.env'
+rm '.Rproj.user/57E07EBA/console06/INDEX001'
+rm '.Rproj.user/57E07EBA/pcs/files-pane.pper'
+rm '.Rproj.user/57E07EBA/pcs/source-pane.pper'
+rm '.Rproj.user/57E07EBA/pcs/windowlayoutstate.pper'
+rm '.Rproj.user/57E07EBA/pcs/workbench-pane.pper'
+rm '.Rproj.user/57E07EBA/persistent-state'
+rm '.Rproj.user/57E07EBA/rmd-outputs'
+rm '.Rproj.user/57E07EBA/saved_source_markers'
+rm '.Rproj.user/57E07EBA/sources/prop/11A1548F'
+rm '.Rproj.user/57E07EBA/sources/prop/18606F2A'
+rm '.Rproj.user/57E07EBA/sources/prop/340B4116'
+rm '.Rproj.user/57E07EBA/sources/prop/341A4E0B'
+rm '.Rproj.user/57E07EBA/sources/prop/355FEF33'
+rm '.Rproj.user/57E07EBA/sources/prop/3ADB2D3D'
+rm '.Rproj.user/57E07EBA/sources/prop/426CEF37'
+rm '.Rproj.user/57E07EBA/sources/prop/5742F716'
+rm '.Rproj.user/57E07EBA/sources/prop/5F586D7F'
+rm '.Rproj.user/57E07EBA/sources/prop/73BFDD21'
+rm '.Rproj.user/57E07EBA/sources/prop/79BAE69E'
+rm '.Rproj.user/57E07EBA/sources/prop/79F2F4F9'
+rm '.Rproj.user/57E07EBA/sources/prop/8528B9DA'
+rm '.Rproj.user/57E07EBA/sources/prop/9C6D73BA'
+rm '.Rproj.user/57E07EBA/sources/prop/BE94CAA6'
+rm '.Rproj.user/57E07EBA/sources/prop/C03EA9AA'
+rm '.Rproj.user/57E07EBA/sources/prop/D8355C09'
+rm '.Rproj.user/57E07EBA/sources/prop/F0742DC5'
+rm '.Rproj.user/57E07EBA/sources/prop/INDEX'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/303676C6'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/303676C6-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/55C7DD76-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/7E49E2CD-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/ADE80FAA-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B5EFE7E-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/B9E569D5-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/D2BDAB78-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/F0BEE6CF-contents'
+rm '.Rproj.user/57E07EBA/sources/s-74C2E744/lock_file'
+rm '.Rproj.user/shared/notebooks/patch-chunk-names'
+rm '.Rproj.user/shared/notebooks/paths'
+rm '.gitignore'
+rm '01-data-prepare/001-Data-Reading.R'
+rm '01-data-prepare/002-Data-Type-Changes.R'
+rm '01-data-prepare/Data/Historical Product Demand.csv'
+rm '01-data-prepare/Data/ecommerce-data/data001.csv'
+rm '01-data-prepare/Data/ecommerce-data/data002.csv'
+rm '01-data-prepare/Data/tv-sales-forecast.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/features.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/stores.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/test.csv'
+rm '01-data-prepare/Data/wallmart-sales-forecast-datasets/train.csv'
+rm 'R-usages.Rproj'
+rm 'README.md'
+rm 'TimeSeriesAnalysisCase1/TutorialCode.R'
+rm 'TimeSeriesAnalysisCase1/chartOfData.png'
+rm 'TimeSeriesAnalysisCase1/search_rhinitis.csv'
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git rm -r --cached .[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[C[23Ppush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master
+Enumerating objects: 82, done.
+Counting objects:   1% (1/82)   Counting objects:   2% (2/82)   Counting objects:   3% (3/82)   Counting objects:   4% (4/82)   Counting objects:   6% (5/82)   Counting objects:   7% (6/82)   Counting objects:   8% (7/82)   Counting objects:   9% (8/82)   Counting objects:  10% (9/82)   Counting objects:  12% (10/82)   Counting objects:  13% (11/82)   Counting objects:  14% (12/82)   Counting objects:  15% (13/82)   Counting objects:  17% (14/82)   Counting objects:  18% (15/82)   Counting objects:  19% (16/82)   Counting objects:  20% (17/82)   Counting objects:  21% (18/82)   Counting objects:  23% (19/82)   Counting objects:  24% (20/82)   Counting objects:  25% (21/82)   Counting objects:  26% (22/82)   Counting objects:  28% (23/82)   Counting objects:  29% (24/82)   Counting objects:  30% (25/82)   Counting objects:  31% (26/82)   Counting objects:  32% (27/82)   Counting objects:  34% (28/82)   Counting objects:  35% (29/82)   Counting objects:  36% (30/82)   Counting objects:  37% (31/82)   Counting objects:  39% (32/82)   Counting objects:  40% (33/82)   Counting objects:  41% (34/82)   Counting objects:  42% (35/82)   Counting objects:  43% (36/82)   Counting objects:  45% (37/82)   Counting objects:  46% (38/82)   Counting objects:  47% (39/82)   Counting objects:  48% (40/82)   Counting objects:  50% (41/82)   Counting objects:  51% (42/82)   Counting objects:  52% (43/82)   Counting objects:  53% (44/82)   Counting objects:  54% (45/82)   Counting objects:  56% (46/82)   Counting objects:  57% (47/82)   Counting objects:  58% (48/82)   Counting objects:  59% (49/82)   Counting objects:  60% (50/82)   Counting objects:  62% (51/82)   Counting objects:  63% (52/82)   Counting objects:  64% (53/82)   Counting objects:  65% (54/82)   Counting objects:  67% (55/82)   Counting objects:  68% (56/82)   Counting objects:  69% (57/82)   Counting objects:  70% (58/82)   Counting objects:  71% (59/82)   Counting objects:  73% (60/82)   Counting objects:  74% (61/82)   Counting objects:  75% (62/82)   Counting objects:  76% (63/82)   Counting objects:  78% (64/82)   Counting objects:  79% (65/82)   Counting objects:  80% (66/82)   Counting objects:  81% (67/82)   Counting objects:  82% (68/82)   Counting objects:  84% (69/82)   Counting objects:  85% (70/82)   Counting objects:  86% (71/82)   Counting objects:  87% (72/82)   Counting objects:  89% (73/82)   Counting objects:  90% (74/82)   Counting objects:  91% (75/82)   Counting objects:  92% (76/82)   Counting objects:  93% (77/82)   Counting objects:  95% (78/82)   Counting objects:  96% (79/82)   Counting objects:  97% (80/82)   Counting objects:  98% (81/82)   Counting objects: 100% (82/82)   Counting objects: 100% (82/82), done.
+Delta compression using up to 4 threads
+Compressing objects:   1% (1/73)   Compressing objects:   2% (2/73)   Compressing objects:   4% (3/73)   Compressing objects:   5% (4/73)   Compressing objects:   6% (5/73)   Compressing objects:   8% (6/73)   Compressing objects:   9% (7/73)   Compressing objects:  10% (8/73)   Compressing objects:  12% (9/73)   Compressing objects:  13% (10/73)   Compressing objects:  15% (11/73)   Compressing objects:  16% (12/73)   Compressing objects:  17% (13/73)   Compressing objects:  19% (14/73)   Compressing objects:  20% (15/73)   Compressing objects:  21% (16/73)   Compressing objects:  23% (17/73)   Compressing objects:  24% (18/73)   Compressing objects:  26% (19/73)   Compressing objects:  27% (20/73)   Compressing objects:  28% (21/73)   Compressing objects:  30% (22/73)   Compressing objects:  31% (23/73)   Compressing objects:  32% (24/73)   Compressing objects:  34% (25/73)   Compressing objects:  35% (26/73)   Compressing objects:  36% (27/73)   Compressing objects:  38% (28/73)   Compressing objects:  39% (29/73)   Compressing objects:  41% (30/73)   Compressing objects:  42% (31/73)   Compressing objects:  43% (32/73)   Compressing objects:  45% (33/73)   Compressing objects:  46% (34/73)   Compressing objects:  47% (35/73)   Compressing objects:  49% (36/73)   Compressing objects:  50% (37/73)   Compressing objects:  52% (38/73)   Compressing objects:  53% (39/73)   Compressing objects:  54% (40/73)   Compressing objects:  56% (41/73)   Compressing objects:  57% (42/73)   Compressing objects:  58% (43/73)   Compressing objects:  60% (44/73)   Compressing objects:  61% (45/73)   Compressing objects:  63% (46/73)   Compressing objects:  64% (47/73)   Compressing objects:  65% (48/73)   Compressing objects:  67% (49/73)   Compressing objects:  68% (50/73)   Compressing objects:  69% (51/73)   Compressing objects:  71% (52/73)   Compressing objects:  72% (53/73)   Compressing objects:  73% (54/73)   Compressing objects:  75% (55/73)   Compressing objects:  76% (56/73)   Compressing objects:  78% (57/73)   Compressing objects:  79% (58/73)   Compressing objects:  80% (59/73)   Compressing objects:  82% (60/73)   Compressing objects:  83% (61/73)   Compressing objects:  84% (62/73)   Compressing objects:  86% (63/73)   Compressing objects:  87% (64/73)   Compressing objects:  89% (65/73)   Compressing objects:  90% (66/73)   Compressing objects:  91% (67/73)   Compressing objects:  93% (68/73)   Compressing objects:  94% (69/73)   Compressing objects:  95% (70/73)   Compressing objects:  97% (71/73)   Compressing objects:  98% (72/73)   Compressing objects: 100% (73/73)   Compressing objects: 100% (73/73), done.
+Writing objects:   1% (1/80)   Writing objects:   2% (2/80)   Writing objects:   3% (3/80)   Writing objects:   5% (4/80)   Writing objects:   6% (5/80)   Writing objects:   7% (6/80)   Writing objects:   8% (7/80)   Writing objects:  10% (8/80)   Writing objects:  11% (9/80)   Writing objects:  12% (10/80)   Writing objects:  13% (11/80)   Writing objects:  15% (12/80)   Writing objects:  16% (13/80)   Writing objects:  17% (14/80)   Writing objects:  18% (15/80)   Writing objects:  20% (16/80)   Writing objects:  21% (17/80)   Writing objects:  22% (18/80)   Writing objects:  23% (19/80)   Writing objects:  25% (20/80)   Writing objects:  26% (21/80)   Writing objects:  27% (22/80)   Writing objects:  28% (23/80)   Writing objects:  30% (24/80)   Writing objects:  31% (25/80)   Writing objects:  32% (26/80)   Writing objects:  33% (27/80)   Writing objects:  35% (28/80)   Writing objects:  36% (29/80)   Writing objects:  37% (30/80)   Writing objects:  38% (31/80)   Writing objects:  40% (32/80)   Writing objects:  41% (33/80)   Writing objects:  42% (34/80)   Writing objects:  43% (35/80)   Writing objects:  45% (36/80)   Writing objects:  46% (37/80)   Writing objects:  47% (38/80)   Writing objects:  48% (39/80)   Writing objects:  50% (40/80)   Writing objects:  51% (41/80)   Writing objects:  53% (43/80)   Writing objects:  55% (44/80)   Writing objects:  56% (45/80)   Writing objects:  57% (46/80)   Writing objects:  58% (47/80)   Writing objects:  61% (49/80)   Writing objects:  62% (50/80)   Writing objects:  63% (51/80)   Writing objects:  65% (52/80)   Writing objects:  66% (53/80)   Writing objects:  67% (54/80)   Writing objects:  68% (55/80)   Writing objects:  70% (56/80)   Writing objects:  71% (57/80)   Writing objects:  72% (58/80)   Writing objects:  73% (59/80)   Writing objects:  75% (60/80)   Writing objects:  76% (61/80)   Writing objects:  77% (62/80)   Writing objects:  78% (63/80)   Writing objects:  80% (64/80)   Writing objects:  81% (65/80)   Writing objects:  82% (66/80)   Writing objects:  83% (67/80)   Writing objects:  85% (68/80)   Writing objects:  86% (69/80)   Writing objects:  88% (71/80)   Writing objects:  90% (72/80)   Writing objects:  91% (73/80)   Writing objects:  92% (74/80)   Writing objects:  93% (75/80)   Writing objects:  93% (75/80), 136.00 KiB | 9.00 KiB/s   Writing objects:  93% (75/80), 1.07 MiB | 77.00 KiB/s   Writing objects:  93% (75/80), 2.55 MiB | 173.00 KiB/s   Writing objects:  93% (75/80), 12.65 MiB | 811.00 KiB/s   Writing objects:  93% (75/80), 23.75 MiB | 1.40 MiB/s   Writing objects:  93% (75/80), 34.98 MiB | 1.95 MiB/s   Writing objects:  93% (75/80), 46.25 MiB | 9.27 MiB/s   Writing objects:  93% (75/80), 57.50 MiB | 11.01 MiB/s   Writing objects:  95% (76/80), 57.50 MiB | 11.01 MiB/s   Writing objects:  96% (77/80), 57.50 MiB | 11.01 MiB/s   Writing objects:  96% (77/80), 58.48 MiB | 6.48 MiB/s   Writing objects:  96% (77/80), 70.32 MiB | 6.59 MiB/s   Writing objects:  96% (77/80), 81.57 MiB | 6.59 MiB/s   Writing objects:  96% (77/80), 92.76 MiB | 6.58 MiB/s   Writing objects:  96% (77/80), 103.95 MiB | 6.58 MiB/s   Writing objects:  97% (78/80), 109.54 MiB | 11.31 MiB/s   Writing objects:  98% (79/80), 109.54 MiB | 11.31 MiB/s   Writing objects: 100% (80/80), 109.54 MiB | 11.31 MiB/s   Writing objects: 100% (80/80), 114.13 MiB | 4.07 MiB/s, done.
+Total 80 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[Kremote: Resolving deltas:  16% (2/12)[Kremote: Resolving deltas:  25% (3/12)[Kremote: Resolving deltas:  33% (4/12)[Kremote: Resolving deltas:  75% (9/12)[Kremote: Resolving deltas:  83% (10/12)[Kremote: Resolving deltas:  91% (11/12)[Kremote: Resolving deltas: 100% (12/12)[Kremote: Resolving deltas: 100% (12/12), done.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: 5c6cb824f194387d9729d5c0ef338366[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git push -u origin master[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[C[5Prm -r --cached .
+error: the following files have staged content different from both the
+file and the HEAD:
+    .Rproj.user/57E07EBA/console06/865B45F5
+    .Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D
+    .Rproj.user/57E07EBA/sources/s-74C2E744/1F3CD73D-contents
+    .gitignore
+(use -f to force removal)
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git rm -r --cached .[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"
+[master 86753e0] TimeSeries Analysis Case1 update
+ 6 files changed, 318 insertions(+), 15 deletions(-)
+ create mode 100644 08-Solve-RealData-Problems/Funda-scripts.R
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git commit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Cadd .[K[11@rm -r --cache[C[C[C[C[C[C[C[C[C[Cpush -u origin master[C[C[C[C[C[C[Ccommit -m "TimeSeries Analysis Case1 update"[C[C[C[C[C[C[C[23Ppush -u origin master[C[C[C[C[C[C[C[5Prm -r --cached .[C[C[C[C[C[C[Cpush -u origin master
+Enumerating objects: 95, done.
+Counting objects:   1% (1/95)   Counting objects:   2% (2/95)   Counting objects:   3% (3/95)   Counting objects:   4% (4/95)   Counting objects:   5% (5/95)   Counting objects:   6% (6/95)   Counting objects:   7% (7/95)   Counting objects:   8% (8/95)   Counting objects:   9% (9/95)   Counting objects:  10% (10/95)   Counting objects:  11% (11/95)   Counting objects:  12% (12/95)   Counting objects:  13% (13/95)   Counting objects:  14% (14/95)   Counting objects:  15% (15/95)   Counting objects:  16% (16/95)   Counting objects:  17% (17/95)   Counting objects:  18% (18/95)   Counting objects:  20% (19/95)   Counting objects:  21% (20/95)   Counting objects:  22% (21/95)   Counting objects:  23% (22/95)   Counting objects:  24% (23/95)   Counting objects:  25% (24/95)   Counting objects:  26% (25/95)   Counting objects:  27% (26/95)   Counting objects:  28% (27/95)   Counting objects:  29% (28/95)   Counting objects:  30% (29/95)   Counting objects:  31% (30/95)   Counting objects:  32% (31/95)   Counting objects:  33% (32/95)   Counting objects:  34% (33/95)   Counting objects:  35% (34/95)   Counting objects:  36% (35/95)   Counting objects:  37% (36/95)   Counting objects:  38% (37/95)   Counting objects:  40% (38/95)   Counting objects:  41% (39/95)   Counting objects:  42% (40/95)   Counting objects:  43% (41/95)   Counting objects:  44% (42/95)   Counting objects:  45% (43/95)   Counting objects:  46% (44/95)   Counting objects:  47% (45/95)   Counting objects:  48% (46/95)   Counting objects:  49% (47/95)   Counting objects:  50% (48/95)   Counting objects:  51% (49/95)   Counting objects:  52% (50/95)   Counting objects:  53% (51/95)   Counting objects:  54% (52/95)   Counting objects:  55% (53/95)   Counting objects:  56% (54/95)   Counting objects:  57% (55/95)   Counting objects:  58% (56/95)   Counting objects:  60% (57/95)   Counting objects:  61% (58/95)   Counting objects:  62% (59/95)   Counting objects:  63% (60/95)   Counting objects:  64% (61/95)   Counting objects:  65% (62/95)   Counting objects:  66% (63/95)   Counting objects:  67% (64/95)   Counting objects:  68% (65/95)   Counting objects:  69% (66/95)   Counting objects:  70% (67/95)   Counting objects:  71% (68/95)   Counting objects:  72% (69/95)   Counting objects:  73% (70/95)   Counting objects:  74% (71/95)   Counting objects:  75% (72/95)   Counting objects:  76% (73/95)   Counting objects:  77% (74/95)   Counting objects:  78% (75/95)   Counting objects:  80% (76/95)   Counting objects:  81% (77/95)   Counting objects:  82% (78/95)   Counting objects:  83% (79/95)   Counting objects:  84% (80/95)   Counting objects:  85% (81/95)   Counting objects:  86% (82/95)   Counting objects:  87% (83/95)   Counting objects:  88% (84/95)   Counting objects:  89% (85/95)   Counting objects:  90% (86/95)   Counting objects:  91% (87/95)   Counting objects:  92% (88/95)   Counting objects:  93% (89/95)   Counting objects:  94% (90/95)   Counting objects:  95% (91/95)   Counting objects:  96% (92/95)   Counting objects:  97% (93/95)   Counting objects:  98% (94/95)   Counting objects: 100% (95/95)   Counting objects: 100% (95/95), done.
+Delta compression using up to 4 threads
+Compressing objects:   1% (1/85)   Compressing objects:   2% (2/85)   Compressing objects:   3% (3/85)   Compressing objects:   4% (4/85)   Compressing objects:   5% (5/85)   Compressing objects:   7% (6/85)   Compressing objects:   8% (7/85)   Compressing objects:   9% (8/85)   Compressing objects:  10% (9/85)   Compressing objects:  11% (10/85)   Compressing objects:  12% (11/85)   Compressing objects:  14% (12/85)   Compressing objects:  15% (13/85)   Compressing objects:  16% (14/85)   Compressing objects:  17% (15/85)   Compressing objects:  18% (16/85)   Compressing objects:  20% (17/85)   Compressing objects:  21% (18/85)   Compressing objects:  22% (19/85)   Compressing objects:  23% (20/85)   Compressing objects:  24% (21/85)   Compressing objects:  25% (22/85)   Compressing objects:  27% (23/85)   Compressing objects:  28% (24/85)   Compressing objects:  29% (25/85)   Compressing objects:  30% (26/85)   Compressing objects:  31% (27/85)   Compressing objects:  32% (28/85)   Compressing objects:  34% (29/85)   Compressing objects:  35% (30/85)   Compressing objects:  36% (31/85)   Compressing objects:  37% (32/85)   Compressing objects:  38% (33/85)   Compressing objects:  40% (34/85)   Compressing objects:  41% (35/85)   Compressing objects:  42% (36/85)   Compressing objects:  43% (37/85)   Compressing objects:  44% (38/85)   Compressing objects:  45% (39/85)   Compressing objects:  47% (40/85)   Compressing objects:  48% (41/85)   Compressing objects:  49% (42/85)   Compressing objects:  50% (43/85)   Compressing objects:  51% (44/85)   Compressing objects:  52% (45/85)   Compressing objects:  54% (46/85)   Compressing objects:  55% (47/85)   Compressing objects:  56% (48/85)   Compressing objects:  57% (49/85)   Compressing objects:  58% (50/85)   Compressing objects:  60% (51/85)   Compressing objects:  61% (52/85)   Compressing objects:  62% (53/85)   Compressing objects:  63% (54/85)   Compressing objects:  64% (55/85)   Compressing objects:  65% (56/85)   Compressing objects:  67% (57/85)   Compressing objects:  68% (58/85)   Compressing objects:  69% (59/85)   Compressing objects:  70% (60/85)   Compressing objects:  71% (61/85)   Compressing objects:  72% (62/85)   Compressing objects:  74% (63/85)   Compressing objects:  75% (64/85)   Compressing objects:  76% (65/85)   Compressing objects:  77% (66/85)   Compressing objects:  78% (67/85)   Compressing objects:  80% (68/85)   Compressing objects:  81% (69/85)   Compressing objects:  82% (70/85)   Compressing objects:  83% (71/85)   Compressing objects:  84% (72/85)   Compressing objects:  85% (73/85)   Compressing objects:  87% (74/85)   Compressing objects:  88% (75/85)   Compressing objects:  89% (76/85)   Compressing objects:  90% (77/85)   Compressing objects:  91% (78/85)   Compressing objects:  92% (79/85)   Compressing objects:  94% (80/85)   Compressing objects:  95% (81/85)   Compressing objects:  96% (82/85)   Compressing objects:  97% (83/85)   Compressing objects:  98% (84/85)   Compressing objects: 100% (85/85)   Compressing objects: 100% (85/85), done.
+Writing objects:   1% (1/93)   Writing objects:   2% (2/93)   Writing objects:   3% (3/93)   Writing objects:   4% (4/93)   Writing objects:   5% (5/93)   Writing objects:   7% (7/93)   Writing objects:   8% (8/93)   Writing objects:   9% (9/93)   Writing objects:  10% (10/93)   Writing objects:  11% (11/93)   Writing objects:  12% (12/93)   Writing objects:  13% (13/93)   Writing objects:  15% (14/93)   Writing objects:  16% (15/93)   Writing objects:  17% (16/93)   Writing objects:  18% (17/93)   Writing objects:  19% (18/93)   Writing objects:  20% (19/93)   Writing objects:  21% (20/93)   Writing objects:  22% (21/93)   Writing objects:  23% (22/93)   Writing objects:  24% (23/93)   Writing objects:  25% (24/93)   Writing objects:  26% (25/93)   Writing objects:  27% (26/93)   Writing objects:  29% (27/93)   Writing objects:  30% (28/93)   Writing objects:  31% (29/93)   Writing objects:  32% (30/93)   Writing objects:  33% (31/93)   Writing objects:  34% (32/93)   Writing objects:  35% (33/93)   Writing objects:  36% (34/93)   Writing objects:  37% (35/93)   Writing objects:  38% (36/93)   Writing objects:  39% (37/93)   Writing objects:  40% (38/93)   Writing objects:  41% (39/93)   Writing objects:  43% (40/93)   Writing objects:  44% (41/93)   Writing objects:  45% (42/93)   Writing objects:  46% (43/93)   Writing objects:  47% (44/93)   Writing objects:  48% (45/93)   Writing objects:  49% (46/93)   Writing objects:  50% (47/93)   Writing objects:  51% (48/93)   Writing objects:  53% (50/93)   Writing objects:  54% (51/93)   Writing objects:  55% (52/93)   Writing objects:  56% (53/93)   Writing objects:  58% (54/93)   Writing objects:  59% (55/93)   Writing objects:  60% (56/93)   Writing objects:  61% (57/93)   Writing objects:  62% (58/93)   Writing objects:  63% (59/93)   Writing objects:  64% (60/93)   Writing objects:  65% (61/93)   Writing objects:  66% (62/93)   Writing objects:  67% (63/93)   Writing objects:  68% (64/93)   Writing objects:  69% (65/93)   Writing objects:  70% (66/93)   Writing objects:  72% (67/93)   Writing objects:  73% (68/93)   Writing objects:  74% (69/93)   Writing objects:  75% (70/93)   Writing objects:  76% (71/93)   Writing objects:  77% (72/93)   Writing objects:  78% (73/93)   Writing objects:  79% (74/93)   Writing objects:  80% (75/93)   Writing objects:  81% (76/93)   Writing objects:  82% (77/93)   Writing objects:  83% (78/93)   Writing objects:  84% (79/93)   Writing objects:  86% (80/93)   Writing objects:  87% (81/93)   Writing objects:  88% (82/93)   Writing objects:  89% (83/93)   Writing objects:  90% (84/93)   Writing objects:  91% (85/93)   Writing objects:  92% (86/93)   Writing objects:  93% (87/93)   Writing objects:  94% (88/93)   Writing objects:  94% (88/93), 136.00 KiB | 10.00 KiB/s   Writing objects:  94% (88/93), 1.08 MiB | 78.00 KiB/s   Writing objects:  94% (88/93), 5.35 MiB | 356.00 KiB/s   Writing objects:  94% (88/93), 16.82 MiB | 1.03 MiB/s   Writing objects:  94% (88/93), 27.95 MiB | 1.61 MiB/s   Writing objects:  94% (88/93), 38.83 MiB | 6.82 MiB/s   Writing objects:  94% (88/93), 50.27 MiB | 9.83 MiB/s   Writing objects:  95% (89/93), 56.20 MiB | 11.11 MiB/s   Writing objects:  96% (90/93), 56.20 MiB | 11.11 MiB/s   Writing objects:  96% (90/93), 58.48 MiB | 6.74 MiB/s   Writing objects:  96% (90/93), 64.94 MiB | 6.87 MiB/s   Writing objects:  96% (90/93), 75.84 MiB | 6.83 MiB/s   Writing objects:  96% (90/93), 87.55 MiB | 6.96 MiB/s   Writing objects:  96% (90/93), 98.83 MiB | 6.96 MiB/s   Writing objects:  96% (90/93), 110.05 MiB | 11.38 MiB/s   Writing objects:  97% (91/93), 110.05 MiB | 11.38 MiB/s   Writing objects:  98% (92/93), 110.05 MiB | 11.38 MiB/s   Writing objects: 100% (93/93), 110.05 MiB | 11.38 MiB/s   Writing objects: 100% (93/93), 114.13 MiB | 4.11 MiB/s, done.
+Total 93 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/18)[Kremote: Resolving deltas:  11% (2/18)[Kremote: Resolving deltas:  22% (4/18)[Kremote: Resolving deltas:  33% (6/18)[Kremote: Resolving deltas:  38% (7/18)[Kremote: Resolving deltas:  50% (9/18)[Kremote: Resolving deltas:  77% (14/18)[Kremote: Resolving deltas:  88% (16/18)[Kremote: Resolving deltas:  94% (17/18)[Kremote: Resolving deltas: 100% (18/18)[Kremote: Resolving deltas: 100% (18/18), done.[K
+remote: [1;33mwarning[m: File .RData is 63.89 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB[K
+remote: [1;31merror[m: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.[K
+remote: [1;31merror[m: Trace: 33b29fdb230168dde2ecb1d4f307e360[K
+remote: [1;31merror[m: See http://git.io/iEPt8g for more information.[K
+remote: [1;31merror[m: File 08-Solve-RealData-Problems/01-Funda/data/funda_train.csv is 458.68 MB; this exceeds GitHub's file size limit of 100.00 MB[K
+To https://github.com/Joohyoung/R-usages.git
+ [31m! [remote rejected][m master -> master (pre-receive hook declined)
+[31merror: failed to push some refs to 'https://github.com/Joohyoung/R-usages.git'
+[m]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ 햣 그 [K[K[K[Kgit -[Krm -r --cached .
+bash: git rm -r --cached .: command not found
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git rm -r --cached .
+bash: git rm -r --cached .: command not found
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .
+bash: git add .: command not found
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ ls
+01-data-prepare
+08-Solve-RealData-Problems
+09-Service-with-AWS
+R-usages.Rproj
+README.md
+TimeSeriesAnalysisCase1
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git add .
+bash: git add .: command not found
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ ㅣㄴ
+bash: ㅣㄴ: command not found
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ ls
+01-data-prepare
+08-Solve-RealData-Problems
+09-Service-with-AWS
+R-usages.Rproj
+README.md
+TimeSeriesAnalysisCase1
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ ls
+01-data-prepare
+08-Solve-RealData-Problems
+09-Service-with-AWS
+R-usages.Rproj
+README.md
+TimeSeriesAnalysisCase1
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ cd ..
+]0;~/001-dev/002-r(base) jeonjuhyeong-ui-MacBook-Pro:002-r JoohyoungJeon$  ls
+20190831-E-PJT-CODE.zip
+BackUP-PJT
+E-mart-poc
+MOT-Class
+R-usages
+R-usages-full
+T-com
+T-com-V1
+T_English_Data.csv
+Untitled.RData
+dnn-training.7z
+kaggle-ms-mal-classifier
+]0;~/001-dev/002-r(base) jeonjuhyeong-ui-MacBook-Pro:002-r JoohyoungJeon$  cd R-usages
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ ls
+01-data-prepare		README.md
+09-Service-with-AWS	TimeSeriesAnalysisCase1
+R-usages.Rproj
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;~/001-dev/002-r/R-usages(base) jeonjuhyeong-ui-MacBook-Pro:R-usages JoohyoungJeonn$ git [K[K[K[K[K[A(base) jeonjuhyeong-uii-MacBook-Pro:R-usagess JoohyoungJeon$ 

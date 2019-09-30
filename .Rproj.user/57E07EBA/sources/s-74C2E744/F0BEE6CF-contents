@@ -1,0 +1,197 @@
+# Feature Information
+# store_id : 상점 고유 아이디
+# card_id : 사용한 카드 고유 아이디
+# card_company : 카드사
+# transacted_date, transacted_time : 거래일자, 거래시간 
+# installment_term 할부거래수 (포인트사용시 60개월 + 실할부개월 ) 
+# region : 상점의 지역
+# type_of_business : 상점업종
+# amount : 거래액
+
+# submission
+# store_id 상점의 고유 아이디
+# amout : 상점별로 2019-03-10 ~ 2019-05-31 총 매출을 예측하여 기입함. 
+
+###### 0. Basic required packages loaidng ####### 
+require(stringr)
+require(dplyr)
+
+
+###### 1. File Reading #######
+funda_path <- paste(getwd(), '08-Solve-RealData-Problems', '01-Funda',  sep = '/')
+funda_data_path <- paste(funda_path, 'data', sep = '/')
+funda_colClass <- c("factor", "factor", "factor", "character", "character", 
+                    "numeric", "character", "character", "numeric")
+
+
+submission <- read.csv(paste0(funda_data_path, '/submission.csv'))
+
+data <- read.csv(file = paste0(funda_data_path, '/funda_train.csv'), 
+                 header = T, strip.white = T, colClasses = funda_colClass)
+
+
+
+
+########## 2. Data Cleansing ########## 
+
+head(data)
+summary(data)
+
+# missing values
+sum(is.na(data))
+
+# 점포별 데이터 집계
+data %>% group_by(store_id, region, type_of_business) %>% 
+  summarise(sum_amount  = sum(amount),
+            mean_amount = mean(amount),
+            sd_amount = sd(amount), 
+            n_rows = n()) %>% 
+  arrange(n_rows) %>% 
+  print(n=500)
+
+# replace "" values to "알수없음"
+data$region[which(data$region == "")] <- "알수없음"
+data$type_of_business[which(data$type_of_business == "")] <- "알수없음"
+
+#
+unique(data$region) #앞의 두글자를 따서 '서울', '부산', '경기' 등으로 구분
+unique(data$type_of_business) #주어진 데이터로 클러스터링 할 수 있는 방법이 없음. 데이터 패턴을 기반으로 해야 함
+
+# 지역만 추출
+data$represented_region <- ifelse(data$region == "알수없음", data$region, 
+                                  stringr::str_sub(data$region, 1, 2))
+
+# 점포의 일자별 거래건 합계를 봤을 때 이상치가 포함될만한 날을 확인 
+data %>% group_by(store_id, transacted_date) %>%
+  summarise(sum_amount = sum(amount)) %>% arrange(sum_amount)
+
+# 93 점포의 경우 여행, 숙박업인데 환불거래가 좀 일어나는 편 
+data %>% filter(store_id == "93") %>% 
+  group_by(transacted_date) %>% 
+  summarise(n_trans = n_distinct(card_id),
+            mean_amount = mean(amount),
+            sum_amount = sum(amount)) %>% 
+  print(n=500)
+
+# 지역별 전체 거래금액 평균 
+data %>% group_by(represented_region) %>% 
+  summarise(sum_amount = sum(amount),
+            n_rows = n(),
+            n_store = n_distinct(store_id), 
+            sum_amount_over_stores = sum_amount/n_store) %>% 
+  arrange(desc(sum_amount_over_stores))
+
+
+# 점포별 환불거래 건수 확인해보자
+data %>% group_by(store_id, transacted_date) %>%
+  summarise(
+    nor_sum_amount = sum(amount[amount >= 0]) ,
+    ret_sum_amount  = sum(amount[amount < 0 ]) )
+
+# 점포별 카드값을 그룹화해서 합계 금액 전체가 - 인 경우. 
+# 이를 포함해도 될것 같은데? 단순 환불율로 계산해도 될듯하다. 
+data %>% group_by(store_id, card_id) %>% 
+  summarise(sum_amount = sum(amount)) %>% 
+  filter(sum_amount < 0) %>% print(n=100)
+
+
+# 60개월 + 실할부개월이므로, 60을 넘어가는 할부기간에 대해서는 포인트 사용이라고 봐도 된다.
+data %>% filter(installment_term >= 60) 
+
+
+
+# Feature Engineering 
+
+# 1. 거래일자를 기준으로 한 날짜변수 생성
+
+
+# add_time_variables 
+add_time_variables <- function(x, data_var_name, kor_holidays = NULL){
+  require(lubridate)
+  
+  date_var <- x[,data_var_name]
+  
+  if(is.null(kor_holidays)){
+    korea_holidays <- c('2016-01-01', '2016-02-07', '2016-02-08', '2016-02-09', '2016-02-10', 
+                        '2016-03-01', '2016-04-13', '2016-05-05', '2016-05-14', '2016-06-06',
+                        '2016-08-15', '2016-09-14', '2016-09-15', '2016-09-16', '2016-10-03', 
+                        '2016-12-25', 
+                        '2017-01-01', '2017-01-27', '2017-01-28', '2017-01-29', '2017-01-30',
+                        '2017-03-01', '2017-05-03', '2017-05-05', '2017-06-06', '2017-08-15',
+                        '2017-10-03', '2017-10-04', '2017-10-05', '2017-10-06', '2017-10-09',
+                        '2017-12-25', 
+                        '2018-01-01', '2018-02-15', '2018-02-16', '2018-02-17', '2018-03-01', 
+                        '2018-05-05', '2018-05-06', '2018-05-07', '2018-05-22', '2018-06-06', 
+                        '2018-06-13', '2018-08-15', '2018-09-23', '2018-09-24', '2018-09-25', 
+                        '2018-09-26', '2018-10-03', '2018-10-09', '2018-12-25',
+                        '2019-01-01', '2019-02-04', '2019-02-05', '2019-02-06', '2019-03-01',
+                        '2019-05-05', '2019-05-12', '2019-06-06', '2019-08-15', '2019-09-12',
+                        '2019-09-13', '2019-09-14', '2019-10-03', '2019-10-09', '2019-12-25')
+  }
+
+  # 요일 (월~일)
+  x$day_week <- lubridate::wday(date_var, label = T, abbr = T,
+                                week_start = getOption("lubridate.week.start", 7))
+  
+  # weekday of month (각 월의 몇주차))
+  x$weekday_month <- ceiling(lubridate::day(date_var)/7)
+  
+  # 주차 (1주차, 2주차, 3주차) 1~52주 - 이미 있는 데이터
+  x$week_year <- lubridate::week(date_var)
+  # 휴일여부 
+  x$is_holiday <- as.factor(ifelse(date_var %in% korea_holidays, 1, 0))
+  return(x)
+}
+
+
+data <- add_time_variables(data, 'transacted_date')
+
+head(data)
+sum(is.na(data))
+
+data %>% group_by(store_id, is_holiday) %>% 
+  summarise(sum_amount = sum(amount),
+            n_trans = n_distinct(card_id),
+            sum_amount_over_trans = sum_amount/n_trans) %>% print(n=500)
+
+data %>% group_by(type_of_business, is_holiday) %>% 
+  summarise(sum_amount = sum(amount),
+            n_trans = n_distinct(card_id),
+            sum_amount_over_trans = sum_amount/n_trans) %>% print(n=500)
+
+
+# 2. 각종 지수변수 생성 
+
+# 3. 상권분석을 위한 지표 생성
+
+
+
+
+
+# 문제 목적 : 점포코드가 주어지면 해당 점포의 판매량을 예측한다.  (2019~03-01~ 2019-05-31)
+
+# 데이터 프로파일링
+# 1. 이상치 제거대상 선별
+
+# 2. 결측치 대치규칙 마련 
+
+# 3. 데이터 시각화 
+
+
+
+
+# 문제 가정 
+# 1. 지역별로 상권 차이가 있기 때문에, 각 지역에 따라 매출금액 추세가 있을 수 있다.
+
+# 2. 업태별로 차이가 있을 것 같은데, 주어진 데이터로 업태를 파악하기엔 힘들다. 
+
+# 3. 거래 일자와 거래 시간대 변수를 활용할텐데, 주로는 거래 일자를 활용하자.
+# 시간대 데이터는 일자별로 예측함에 있어 그다지 중요하진 않다. 
+
+# 4. 할부개월은 기본 60개월이고, 할부개월이 60개월이 넘어가는 경우에는 포인트를 통한 지출이다
+# 포인트 지출이 많은 경우가 의미하는 바를 골라내는 것도 좋을 것이다. 새로운 변수를 만들어볼 필요가 있다.
+
+# 5. 카드회사별로 또 다르기 때문에 카드회사에 대한 어떤 일조의 가중치도 좋을것 같고.
+
+
+head(data)

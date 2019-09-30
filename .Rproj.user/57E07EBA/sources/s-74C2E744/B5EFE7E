@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569769216447.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B5EFE7E",
+    "lastKnownWriteTime" : 1569834975,
+    "last_content_update" : 1569834975684,
+    "path" : "~/001-dev/002-r/R-usages/TimeSeriesAnalysisCase1/TutorialCode.R",
+    "project_path" : "TimeSeriesAnalysisCase1/TutorialCode.R",
+    "properties" : {
+        "cursorPosition" : "10,1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
