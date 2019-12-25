@@ -148,6 +148,50 @@ data$M <- as.factor(data$M)
 # 변수 선택 x and Month
 m_binary_data <- data[,c("x","seq_time", "M")]
 
+v <- 1:3
+
+names(v) <- c("a", "b", "c")
+v[4] <- 4
+
+names(v[4])
+
+y <- 1:4
+attr(y, "new_arrtibute") <- "Here's a vector"
+attr(y, "new_arrtibute")
+y <- 1:5
+attr(y, "new_arrtibute")
+
+mtrx
+
+x <- c(12L, 6L, 10L, 8L, 15L)
+typeof(median(x))
+
+
+late_delivery <- data$x >= 30
+index(late_delivery)
+
+indat <- c("Ash Rd", "Ash Ave", "Ash St")
+grep("[Rd|Ave|Dr|St]", indat)
+
+v1 <- c(1,2,3)
+v2 <- list(4, 5, 6)
+cbind(v1, v2)
+
+v1 <- c(1,2,3)
+v2 <-c(4, 5, 6)
+cbind(v1, v2)
+
+v1 <- list(1,2,3)
+v2 <-list(c(4, 5, 6))
+cbind(v1, v2)
+
+ls(pat="data")
+
+
+
+mtrx <- matrix(c(3,5,8,4), nrow=2, ncol=2, byrow = T)
+mtrx * mtrx
+
 
 head(m_binary_data)
 
