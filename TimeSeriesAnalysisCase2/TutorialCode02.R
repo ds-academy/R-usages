@@ -1,16 +1,11 @@
 comment = "
-  1. 구글 트렌드를 이용하여 Seasonal variations이 있는 데이터 찾기 https://www.google.com/trends/?hl=ko
-
-(1)  다음 방법들을 적용하고 예측력 비교해 보세요 (최소 10시점 이후 예측할 것): Dummy variable, trigonometric models (2가지 방법 모두), Additive Holt-Winters, Multiplicative Holt-Winters.
-(2) Additive Holt-Winters와 Multiplicative Holt-Winters 방법에서 Weighting parameter (alpha, gamma, delta) 변경하여 예측력 비교해 보세요.
+1. 구글 트렌드를 이용하여 Seasonal variations이 있는 데이터 찾기 https://www.google.com/trends/?hl=ko
+ (1)  다음 방법들을 적용하고 예측력 비교해 보세요 (최소 10시점 이후 예측할 것)
+  - Dummy variable, trigonometric models, Additive Holt-Winters, Multiplicative Holt-Winters.
+ (2) Additive Holt-Winters와 Multiplicative Holt-Winters 방법의 Weighting parameter (alpha, gamma, delta) 변경하여 예측력 비교해 보세요.
 
 2. 구글 트렌드를 이용하여 Trend가 존재하는 데이터 찾기  https://www.google.com/trends/?hl=ko
-
-Simple exponential smoothing과 Double exponential smoothing 방법 적용하고 예측력 비교해 보세요 (최소 10시점 예측)
-
-
-references : https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/src/timeseries.html
-
+ (1) Simple exponential smoothing과 Double exponential smoothing 방법 적용하고 예측력 비교해 보세요 (최소 10시점 예측)
 "
 
 install.packages("plotly")

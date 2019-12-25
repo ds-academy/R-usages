@@ -15,9 +15,14 @@
 
 
 
-#### 데이터 분석 Case Study
+#### 시계열 데이터 분석 Case Study
 
-1. TimeSeries Analysis (시계열 데이터 분석)
+1. TimeSeriesAnalysisCase1
   - Trigonometric Model
   - Binary Model
+
+2. TimeSeriesAnalysisCase2 
+  - Exponential Smoothing
+  - Holt-Winters
+
 
